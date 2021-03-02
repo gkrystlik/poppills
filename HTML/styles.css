@@ -2,10 +2,16 @@
     --pink: rgb(216, 29, 216);
     --green: rgb(128, 216, 150);
     --blue: rgb(0, 180, 200);
+
+    
+    --01-lightbrown:#ece9e6;
+    --02-brown-grey:#75726e;
+    --03-darkbrown:rgb(102, 94, 86);
+    --04-verydarkbrown:#454240;
 }
 
 html {
-    font-size: 100%;
+    font-size: 100%;    
     box-sizing: border-box;
 }
 
@@ -127,15 +133,43 @@ justify-content: center;
 
 
 .image-book {
+/*    background-color:var(--blue);*/
+
     grid-column-start: span 4;
-    background-color:var(--blue);
+    text-align: center;
+    
+    display: grid; 
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    
     
 }
-
+.imgwrapper{
+    
+/*    background-color: brown;*/
+    width: 90%;
+    
+}
+.imgwrapper img{
+    object-fit:contain;
+    opacity: 100%;
+    width: 100%;
+    right: 0;
+}
+.credits{
+/*    width: 300px;*/
+}
 .description-book {
     grid-column-start: span 4;
-    background-color:var(--pink);  
-    
+/*    background-color:var(--pink);  */
+    margin: 40px 160px 20px 40px;
+}
+
+.description-book p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.1rem;
 }
 
 .image-tshirt {
@@ -162,6 +196,67 @@ justify-content: center;
 .introduction{
     height: 400px;
 }
+
+
+h3{
+    color: var(--03-darkbrown);
+    font-size: 0.8rem;
+    padding-top: 16px;
+    padding-bottom: 4px;
+    margin: 0;
+}
+
+h4{
+    color:black;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    margin: 0;
+    opacity: 60%;
+}
+
+h2{
+    font-size: 4rem;
+    margin: 8px;
+}
+
+
+button:hover,
+button:focus {
+  cursor: pointer;
+}
+
+ button {
+    margin-top: 24px;
+    font: bold 32px times;
+    text-transform: uppercase;
+    padding: 20px 20px;
+    border: 0px;
+    color: white;
+    
+}
+
+/* Button Styling*/
+
+#accept-btn {
+  transition: background-color 0.5s ease;
+  color: white;
+  background-color: var(--03-darkbrown);
+}
+
+#accept-btn a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 24px;
+    font-family:serif;
+}
+
+#accept-btn:hover {
+  background-color: var(--04-verydarkbrown);
+}
+
 
 
 
@@ -211,9 +306,8 @@ nav.flexbox {
 
 .image-book {
     grid-column-start: span 8;
-    
 }
-
+        
 .description-book {
     grid-column-start: span 8;
  
