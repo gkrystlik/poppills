@@ -174,8 +174,7 @@ nav.flexbox {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-}
+    }
     
 
 .fullwidth {
@@ -186,7 +185,7 @@ nav.flexbox {
    /* @media (min-width: 600px){
         flex: 0 1 auto;
     }*/
-}
+    }
     
     ul li {
         flex: 0 0 auto;
@@ -203,8 +202,10 @@ nav.flexbox {
     grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-rows:auto;
     grid-gap: 0px 0px;
-}
+    }
 
+.videos{
+    grid-column-start: span 8;
 }
 
 
@@ -232,4 +233,6 @@ nav.flexbox {
 
 .image-tirage{
     grid-column-start: span 8;
+}
+
 }
