@@ -206,3 +206,30 @@ nav.flexbox {
 }
 
 }
+
+
+.image-book {
+    grid-column-start: span 8;
+    
+}
+
+.description-book {
+    grid-column-start: span 8;
+ 
+}
+
+.image-tshirt {
+    grid-column-start: span 8; 
+}
+
+.description-tshirt {
+    grid-column-start: span 8;
+    
+}
+.description-tirage{
+    grid-column-start: span 8;
+}
+
+.image-tirage{
+    grid-column-start: span 8;
+}
