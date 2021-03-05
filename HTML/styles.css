@@ -95,17 +95,24 @@ ul.section-links{
 
 
 .videos{
-    grid-column-start: 2;
-    grid-column-end: 8;
-    background-color:var(--green);
-    padding: 40px 0px 0px 0px;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    background-color:var(--01-lightbrown);
+    
 }
+.videowrapper > p{
+    
 
+}
 .videowrapper{
     position: relative;
     padding-bottom: 56.25%;
     padding-top: 12px;
     height: 0px;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 40px;
+    margin-bottom: 80px;
 }
 .videowrapper iframe{
     position: absolute;
@@ -124,7 +131,7 @@ ul.section-links{
     align-items: center;
     justify-items: center;
     
-    
+    margin-bottom: 60px;
 }
 .imgwrapper{
     
@@ -144,10 +151,11 @@ ul.section-links{
 .description-book {
     grid-column-start: span 4;
 /*    background-color:var(--pink);  */
-    margin: 40px 160px 20px 40px;
+    padding: 40px 160px 20px 40px;
 }
 
 .description-book p {
+    
     font-size: 1.2rem;
     line-height: 1.8rem;
     letter-spacing: 0.1rem;
@@ -155,13 +163,13 @@ ul.section-links{
 
 .image-tshirt {
     grid-column-start: span 4;
-    background-color:var(--blue);
+    background-color:var(--02-brown-grey);
     
 }
 
 .description-tshirt {
     grid-column-start: span 4;
-    background-color:var(--pink);
+    background-color:var(--02-brown-grey);
     
 }
 .description-tirage{

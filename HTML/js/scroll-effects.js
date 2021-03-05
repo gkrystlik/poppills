@@ -63,7 +63,7 @@
                     // current value setter
                     setValue: () => {
                         const toValue = 1.6;
-                        const fromValue = 0.8;
+                        const fromValue = 1;
                         const val = MathUtils.map(this.props.top - docScroll, winsize.height, -1 * this.props.height, fromValue, toValue);
                         return Math.max(Math.min(val, toValue), fromValue);
                     }
