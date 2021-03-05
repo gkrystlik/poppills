@@ -8,6 +8,10 @@
     --02-brown-grey:#75726e;
     --03-darkbrown:rgb(102, 94, 86);
     --04-verydarkbrown:#454240;
+    --imgwidthmax:2500px;
+    --overflow: 40px;
+    --aspect-ratio: 1/1.5;
+    --imgwidth: calc(var(--imgwidthmax) * var(--aspect-ratio));
 }
 
 html {
@@ -54,6 +58,7 @@ section {
 
 
 nav.flexbox {
+    z-index: 10000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,30 +93,6 @@ ul.section-links{
 }
 
 
-div.logo{
-    background-color: dodgerblue;
-}
-
-.imgparallax {
-    grid-column: 1/-1;
-    background-color:var(--green);
-    height: 95vh;
-    width: 100vw;
-    scroll-snap-align: start;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-
-#imgparallax.intro logo{
-justify-content: center;
-  align-items: center;
-    width: 300px;
-    height: 200px;
-    background-color: blue;
-}
 
 .videos{
     grid-column-start: 2;
@@ -258,9 +239,92 @@ button:focus {
 }
 
 
+/*///////////////////////////////////   IMG PARALLAX STYLES    ////////////////////////////////////////////*/
+
+.imgparallax {
+    grid-column: 1/-1;
+/*    height: 95vh;*/
+    width: 100vw;
+    scroll-snap-align: start;
+/*
+    background-color:var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+*/
+
+}
+
+.content__item-imgwrap {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    --imgwidth: 100%;
+    width: var(--imgwidth);
+    z-index: 8;
+    padding-bottom: 95vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*
+    background-color: aqua;
+*/
+}
+
+.content__item-img {
+	height: calc(90vh + (2 * var(--overflow)));
+	top: calc( -1 * var(--overflow));
+    width: 100%;
+	position: absolute;
+	background-size: cover;
+	background-position: 50% 0%;
+	will-change: transform;
+	opacity: 1;
+    
+}
 
 
-/*////////   FOR MOBILE & TABLET    ////////*/
+
+.logowrapper{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    background-position: 0% 0%;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    
+}.logo{
+    position: relative;
+    background-image: url(images/logo-sauvage.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 30vh;
+/*    background-color: blue;*/
+    z-index: 10;
+    
+}
+
+
+
+/*
+.img-parallax {
+    object-fit:cover;
+    opacity: 100%;
+    width: 100%;
+    right: 0;
+}
+*/
+
+
+
+/*///////////////////////////////////   FOR MOBILE & TABLET    ////////////////////////////////////////////*/
 
 
 @media only screen and (max-width: 768px) {

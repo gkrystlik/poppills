@@ -7,22 +7,33 @@
         <meta name="description" content="content description">
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
-    <nav class="flexbox">       
-    <a href="#">Logo</a> 
-    <ul class="section-links fullwidth">
-        <li><a href="#">Livre</a></li>
-        <li><a href="#">t-shirt</a></li>
-        <li><a href="#">tirages</a></li>
-    </ul>
-    <ul class="basket fullwidth">
-        <li>Régler <a href="#">?Basket</a></li>
-    </ul>
-    </nav>
+    
+    
+<body>
+    <main>
+        <div data-scroll>
+            
+        <nav class="flexbox">       
+            <a href="#">Logo</a> 
+            <ul class="section-links fullwidth">
+                <li><a href="#">Livre</a></li>
+                <li><a href="#">t-shirt</a></li>
+                <li><a href="#">tirages</a></li>
+            </ul>
+            <ul class="basket fullwidth">
+                <li>Régler <a href="#">?Basket</a></li>
+            </ul>
+        </nav>
         
-<div class="grid-container">
-    <div id="intro" class="imgparallax intro">
-            <div class="logo">Logo SAUVAGE</div>
+<div class="content grid-container">
+    <div id="intro" class="content__item content__item--wide imgparallax intro">
+         <!-- <img src="images/intro-oiseaux.jpg" class="img-parallax">-->
+        
+        <div class="content__item-imgwrap"><div class="content__item-img" style="background-image: url(images/intro-oiseaux.jpg);"></div>
+        </div>
+        <div class="logowrapper"><div class="logo"></div></div>
+
+         
     </div>
     
     <div class="image-book">
@@ -82,5 +93,10 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
     <div class="image-tirage">image3</div>
 </div>
         
-        
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/scroll-effects.js"></script>
+            
+            
+            </div>
+            </main>
     </body>
