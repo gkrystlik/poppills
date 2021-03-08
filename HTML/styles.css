@@ -1,3 +1,31 @@
+@font-face {
+  font-family: 'Gotham-Book';
+  src: url('fonts/Gotham-Book/Gotham-Book.eot?#iefix') format('embedded-opentype'),  url('fonts/Gotham-Book.otf')  format('opentype'),
+	     url('fonts/Gotham-Book/Gotham-Book.woff') format('woff'), url('fonts/Gotham-Book/Gotham-Book.ttf')  format('truetype'), url('fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Garamond-Premier-Pro';
+    src: url('fonts/Garamond/GaramondPremrPro.eot');
+    src: url('fonts/Garamond/GaramondPremrPro.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Garamond/GaramondPremrPro.woff2') format('woff2'),
+         url('fonts/Garamond/GaramondPremrPro.woff') format('woff'),
+         url('fonts/Garamond/GaramondPremrPro.ttf')  format('truetype'),
+         url('fonts/Garamond/GaramondPremrPro.svg#Garamond Premier Pro') format('svg');
+}
+
+@font-face {
+    font-family: 'Garamond-Premier-Pro-Smbd';
+    src: url('fonts/Garamond/GaramondPremrPro-Smbd.eot');
+    src: url('fonts/Garamond/GaramondPremrPro-Smbd.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Garamond/GaramondPremrPro-Smbd.woff2') format('woff2'),
+         url('fonts/Garamond/GaramondPremrPro-Smbd.woff') format('woff'),
+         url('fonts/Garamond/GaramondPremrPro-Smbd.ttf')  format('truetype'),
+         url('fonts/Garamond/GaramondPremrPro-Smbd.svg#Garamond Premier Pro Smbd') format('svg');
+}
+
 :root {
     --pink: rgb(216, 29, 216);
     --green: rgb(128, 216, 150);
@@ -33,7 +61,12 @@ body {
 
 a {
     position: relative;
+    color: white;
     text-decoration: none;
+}
+a:hover {
+    color: white;
+    
 }
 
 a::before {
@@ -55,8 +88,24 @@ section {
     
 }
 
+.navigation{
+    grid-column-start: span 8;
+    top: 0;
+    background-color: black;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 10000;
+    font-family: "Gotham-Book";
+    font-size: 1rem;
+    color: white;
+    height: 60px;
+    padding-top: 5px;
+}
 
-
+.sticky {
+    top: 0;
+    position: fixed;
+}
 nav.flexbox {
     z-index: 10000;
     display: flex;
@@ -67,14 +116,14 @@ nav.flexbox {
     text-transform: uppercase;
     
 }
-    ul {        
+  nav.flexbox  ul {        
         display: flex;
         align-items: center;
         text-decoration:none;
     }
 
     ul li {
-        margin-right: 20px;
+        margin-right: 60px;
         list-style: none;
 }
     ul li:last-child {
@@ -82,6 +131,40 @@ nav.flexbox {
         
     }
 
+   ul li a{
+       opacity: 0.3;
+       transition: opacity .2s ease-in-out;
+}
+
+   ul li a:hover{
+       opacity: 1;
+       transition: opacity .3s ease-in-out;
+}
+ul li.active a{
+    opacity: 1;
+}
+ul.commander{
+    margin: 0;
+    padding: 0;
+}
+.prix{
+    font-family: "Garamond-Premier-Pro-Smbd";
+}
+ a.commander-link {
+    font-family: "Garamond-Premier-Pro-Smbd";
+    font-size: 1.2rem;
+    letter-spacing: 1.1px;
+     line-height: 1.2rem;
+    color: white; 
+    display: block;
+    padding: 25px;  
+    background-color: var(--03-darkbrown);  
+    text-decoration: none; 
+    width: 200px; 
+    text-align: center;
+    opacity: 0.7;
+    border-radius: 2px;
+}
 ul.section-links{
 }
 
@@ -101,7 +184,7 @@ ul.section-links{
     
 }
 .videowrapper > p{
-    
+    font-family: Garamond-Premier-Pro-Smbd;
 
 }
 .videowrapper{
@@ -125,19 +208,24 @@ ul.section-links{
 
     grid-column-start: span 4;
     text-align: center;
-    
     display: grid; 
     grid-template-columns: 1fr;
-    align-items: center;
+    grid-template-rows: 1fr;
+    align-items:flex-start;
     justify-items: center;
     
     margin-bottom: 60px;
 }
+
+.image-book-container{
+    display: grid; 
+    justify-items: center;
+    padding-top: 60px;
+}
+
 .imgwrapper{
-    
-/*    background-color: brown;*/
     width: 90%;
-    
+    height: auto;
 }
 .imgwrapper img{
     object-fit:contain;
@@ -151,20 +239,26 @@ ul.section-links{
 .description-book {
     grid-column-start: span 4;
 /*    background-color:var(--pink);  */
-    padding: 40px 160px 20px 40px;
+    padding: 60px 160px 20px 40px;
 }
 
 .description-book p {
-    
+    font-family: "Garamond-Premier-Pro";
     font-size: 1.2rem;
     line-height: 1.8rem;
     letter-spacing: 0.1rem;
 }
 
+.tshirt-col{
+}
+
 .image-tshirt {
     grid-column-start: span 4;
     background-color:var(--02-brown-grey);
-    
+    grid-template-columns: 1fr;
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
 
 .description-tshirt {
@@ -173,14 +267,41 @@ ul.section-links{
     
 }
 .description-tirage{
-    grid-column-start: span 2;
-    background-color:var(--blue);
+    grid-column-start: span 3;
+    grid-row-start: span 3;
+/*    background-color:var(--blue);*/
 }
 
 .image-tirage{
-    grid-column-start: span 2;
-    background-color:var(--pink);
+    display: grid;
+    grid-column-start: span 5;
+/*    background-color:var(--pink);*/
+    justify-items: center;
+    padding-top: 40px;
+    padding-right: 160px;
 }
+
+.shop{
+    margin-top: 120px;
+    grid-column-start: span 8;
+    background-color:var(--02-darkbrown);
+    display: grid;
+    grid-template-columns:repeat(12, 1fr);
+    align-items:flex-start;
+    justify-items: center;
+}
+
+.description-tirage {
+    padding-left: 40px;
+    padding-top: 40px;
+}
+.description-tirage ul {
+    list-style-type:square;
+    list-style-position: inside;
+    padding-inline-start: 0px;
+}
+
+
 
 .introduction{
     height: 400px;
@@ -206,7 +327,7 @@ h4{
 }
 
 h2{
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 8px;
 }
 
@@ -229,6 +350,8 @@ button:focus {
 /* Button Styling*/
 
 #accept-btn {
+    height: 60px;
+    width: 200px;
   transition: background-color 0.5s ease;
   color: white;
   background-color: var(--03-darkbrown);
@@ -238,7 +361,7 @@ button:focus {
     position: relative;
     text-decoration: none;
     color: white;
-    font-size: 24px;
+    font-size: 14px;
     font-family:serif;
 }
 
@@ -251,8 +374,10 @@ button:focus {
 
 .imgparallax {
     grid-column: 1/-1;
-/*    height: 95vh;*/
+    height: 100vh;/*
     width: 100vw;
+    */
+    
     scroll-snap-align: start;
 /*
     background-color:var(--green);
@@ -270,7 +395,7 @@ button:focus {
     --imgwidth: 100%;
     width: var(--imgwidth);
     z-index: 8;
-    padding-bottom: 95vh;
+    padding-bottom: 100vh;
     text-align: center;
     display: flex;
     align-items: center;
@@ -281,8 +406,8 @@ button:focus {
 }
 
 .content__item-img {
-	height: calc(90vh + (2 * var(--overflow)));
-	top: calc( -1 * var(--overflow));
+	height: calc(140vh + (4 * var(--overflow)));
+	top: calc( -3 * var(--overflow));
     width: 100%;
 	position: absolute;
 	background-size: cover;
@@ -319,7 +444,9 @@ button:focus {
     
 }
 
-
+.tshirt-col .content__item-imgwrap, .tirages .content__item-imgwrap{
+    padding-bottom: 100vh;
+}
 
 /*
 .img-parallax {
@@ -335,7 +462,7 @@ button:focus {
 /*///////////////////////////////////   FOR MOBILE & TABLET    ////////////////////////////////////////////*/
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1023px) {
 nav.flexbox {
     display: flex;
     flex-wrap: wrap;
@@ -379,10 +506,22 @@ nav.flexbox {
 .image-book {
     grid-column-start: span 8;
 }
-        
+    
+.imgwrapper{
+    width: 100%;
+    padding-top: 40px;
+}  
+.imgwrapper img{
+/*
+    object-fit: cover;
+    height: 65vh;
+*/
+    }
+    
 .description-book {
     grid-column-start: span 8;
- 
+    text-align: center;
+    padding: 40px 40px 60px 40px;
 }
 
 .image-tshirt {
@@ -401,4 +540,7 @@ nav.flexbox {
     grid-column-start: span 8;
 }
 
+.description-tirage {
+    text-align: center;
+    }
 }

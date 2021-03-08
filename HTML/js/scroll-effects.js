@@ -59,11 +59,11 @@
                     // current value
                     current: 0, 
                     // amount to interpolate
-                    ease: 0.1,
+                    ease: 0.6,
                     // current value setter
                     setValue: () => {
-                        const toValue = 1.6;
-                        const fromValue = 1;
+                        const toValue = 2;
+                        const fromValue = 0.6;
                         const val = MathUtils.map(this.props.top - docScroll, winsize.height, -1 * this.props.height, fromValue, toValue);
                         return Math.max(Math.min(val, toValue), fromValue);
                     }
@@ -71,8 +71,8 @@
                 titleTranslationY: {
                     previous: 0, 
                     current: 0, 
-                    ease: 0.1,
-                    fromValue: Number(MathUtils.getRandomFloat(30,400)),
+                    ease: 0.9,
+                    fromValue: Number(MathUtils.getRandomFloat(100,300)),
                     setValue: () => {
                         const fromValue = this.renderedStyles.titleTranslationY.fromValue;
                         const toValue = -1*fromValue;
@@ -132,7 +132,9 @@
         }
         layout() {
             // scale the image
-            this.DOM.image.style.transform = `scale3d(${this.renderedStyles.imageScale.previous},${this.renderedStyles.imageScale.previous},1)`;
+            //this.DOM.image.style.transform = `scale3d(${this.renderedStyles.imageScale.previous},${this.renderedStyles.imageScale.previous},1)`;
+            
+            this.DOM.image.style.transform = `translate3d(0,${this.renderedStyles.titleTranslationY.previous}px,0)`;
             // translate the title
             // this.DOM.title.style.transform = `translate3d(0,${this.renderedStyles.titleTranslationY.previous}px,0)`;
         }
@@ -160,7 +162,7 @@
                     // current value
                     current: 0, 
                     // amount to interpolate
-                    ease: 0.1,
+                    ease: 1,
                     // current value setter
                     // in this case the value of the translation will be the same like the document scroll
                     setValue: () => docScroll
