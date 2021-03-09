@@ -1,16 +1,44 @@
+<!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8">
+    <title>SAUVAGE - Le livre</title>
+    <meta name="description" content="">
+    <!-- @stylesheet styles/master -->
+<!--    <link rel="stylesheet" type="text/css" href="master.css">-->
+      <link rel="stylesheet" type="text/css" href="styles.css">
     
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Sauvage - the book</title>
-        <meta name="description" content="content description">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    
-<body>        
+  </head>
+  <body class="">
+<!--
+    <section class="shop">
+      
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="business" value="2CHD9W6FDM4MS">
+        <input type="hidden" name="lc" value="EN">
+        <input type="hidden" name="button_subtype" value="products">
+        <input type="hidden" name="no_note" value="0">
+        <input type="hidden" name="cn" value="Ajouter des instructions particulières pour le vendeur">
+        <input type="hidden" name="no_shipping" value="2">
+        <input type="hidden" name="rm" value="1">
+        <input type="hidden" name="return" value="http://www.poppills.org/thanks.html">
+        <input type="hidden" name="cancel_return" value="http://www.poppills.org/cancelled.html">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="upload" value="1">
+        <div class="cart"></div>
+        <button type="submit" class="shop-button js-submit is-visible">
+          <span class="shop-button-price">$0</span>
+          <span class="shop-button-text"><span>Go to check out!</span></span>
+        </button>
+        
+      </form>
 
-    <div id="intro" class=" imgparallax intro">
+    </section>
+ -->   
+
+<!-- //////////////////////////////////////////-->
+          <div id="intro" class=" imgparallax intro">
         <div class="content__item-imgwrap"><div class="content__item-img" style="background-image: url(images/intro-oiseaux.jpg);"></div>
         </div>
         <div class="logowrapper"><div class="logo"></div></div>
@@ -20,20 +48,44 @@
                 <nav class="flexbox">       
                     <a href="#">Logo</a> 
                     <ul class="section-links fullwidth">
-                        <li><a href="#book">Livre</a></li>
+                        <li><a href="#bookcontainer">Livre</a></li>
                         <li><a href="#tshirt">t-shirt</a></li>
                         <li><a href="#tirages">tirages</a></li>
-                        <li><a href="#shop">Boutique</a></li>
+                        <li><a href="#shop-html-section">Boutique</a></li>
                     </ul>
+
                     <ul class="basket fullwidth">
-                        <li>Régler <a href="#">?Basket</a></li>
+                        <li>Régler</li>
+                        <li>
+                       <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="business" value="2CHD9W6FDM4MS">
+                            <input type="hidden" name="lc" value="EN">
+                            <input type="hidden" name="button_subtype" value="products">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="cn" value="Ajouter des instructions particulières pour le vendeur">
+                            <input type="hidden" name="no_shipping" value="2">
+                            <input type="hidden" name="rm" value="1">
+                            <input type="hidden" name="return" value="http://www.poppills.org/thanks.html">
+                            <input type="hidden" name="cancel_return" value="http://www.poppills.org/cancelled.html">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="upload" value="1">
+                            <div class="cart"></div>
+                            <button type="submit" class="shop-button js-submit is-visible">
+                              <span class="shop-button-price">$0</span>
+<!--                              <span class="shop-button-text"><span>Go to check out!</span></span>-->
+                            </button>
+
+                          </form>
+                        </li>
                     </ul>
                 </nav>
             </div>
     <main>
+     
         <div data-scroll>
 <div class="grid-container">            
-    <div class="image-book" id="book">
+    <div class="image-book" id="bookcontainer">
         <div class="image-book-container">
                 <div class="imgwrapper">
                     <img src="images/livre-sauvage.png">
@@ -66,7 +118,7 @@ Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
 Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum.</p>
             </div>
         <div class="prix"><h2>35 €</h2></div>
-        <ul class="commander"><li><a href="#shop" class="commander-link">COMMANDER</a></li></ul>
+        <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
             
     </div>
     
@@ -99,7 +151,7 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
             </p>
                 </div>
             <div class="prix"><h2>15 €</h2></div>
-            <ul class="commander"><li><a href="#shop" class="commander-link">COMMANDER</a></li></ul>
+            <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
         </div>
 
     <div class="content__item imgparallax tirages">
@@ -118,14 +170,15 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
                     </ul>
                 </div>
             <div class="prix"><h2>150 €</h2></div>
-            <ul class="commander"><li><a href="#shop" class="commander-link">COMMANDER</a></li></ul>
+            <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
         </div>
     
     <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage1.jpg"></div></div>
     <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage2.jpg"></div></div>
     <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage3.jpg"></div></div>
     
-    <div class="shop" id="shop">
+    <div class="shop1" id="shop-html-section">
+       
         <div class="shop-book" style="grid-column-start: span 6; display: grid; grid-template-columns: 1fr 1fr;">
             <div class="shop-col-left" style="grid-column-start: span 1; display: grid; grid-template-columns: 1fr;">
                 <div class="imgwrapper">
@@ -135,10 +188,14 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
             <div class="shop-col-right" style="grid-column-start: span 1; display: grid; grid-template-columns: 1fr;">
                 <div>
                         <div class="decription">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
-                            </div>
-                        <div class="prix"><h2>35 €</h2></div>
-                        <button id="accept-btn" type="button"><a href="#shop">Ajouter au panier</a></button>
+                            <p>Livre Sauvage - 199 pages</p>
+                        </div>
+                        <div class="">
+                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="48" data-price-eur="40">€40</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        </div>
+                        <div class="">
+                              <label for="book"><input type="checkbox" id="book" data-price-usd="48" data-price-eur="40" data-item="Sauvage - Book" class="js-updatePrice" value="checkbox"> Acheter le livre <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
                 </div>
             </div>
         </div>
@@ -151,10 +208,23 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
             <div class="shop-col-right" style="grid-column-start: span 1; display: grid; grid-template-columns: 1fr;">
                 <div>
                         <div class="decription">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
-                            </div>
-                        <div class="prix"><h2>15 €</h2></div>
-                        <button id="accept-btn" type="button"><a href="#shop">Ajouter au panier</a></button>
+                            <p>T-shirt coton bio</p>
+                        </div>
+                        <div class="">
+                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="48" data-price-eur="30">€30</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        </div>
+                        <div class="S">
+                              <label for="tshirt-S"><input type="checkbox" id="tshirtS" data-price-usd="48" data-price-eur="30" data-item="tshirtS" class="js-updatePrice" value="checkbox"> Size S <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                        <div class="M">
+                              <label for="tshirt-M"><input type="checkbox" id="tshirtM" data-price-usd="48" data-price-eur="30" data-item="tshirtM" class="js-updatePrice" value="checkbox"> Size M <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                        <div class="L">
+                              <label for="tshirt-L"><input type="checkbox" id="tshirtL" data-price-usd="48" data-price-eur="30" data-item="tshirtL" class="js-updatePrice" value="checkbox"> Size L <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                        <div class="">
+                              <label for="tshirt-XL"><input type="checkbox" id="tshirtXL" data-price-usd="48" data-price-eur="30" data-item="tshirtXL" class="js-updatePrice" value="checkbox"> Size XL <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
                 </div>
             </div>
         </div>
@@ -162,10 +232,15 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
             <div class="image-tirage">
                 <div class="imgwrapper"><img src="images/tirage1.jpg"></div>
                 <div class="decription">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+                       <div class="decription">
+                            <p>Tirage 1</p>
                         </div>
-                <div class="prix"><h2>150 €</h2></div>
-                <button id="accept-btn" type="button"><a href="#shop">Ajouter au panier</a></button>
+                        <div class="">
+                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="140" data-price-eur="150">€150</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        </div>
+                        <div class="S">
+                              <label for="tshirt-S"><input type="checkbox" id="tirage1" data-price-usd="140" data-price-eur="150" data-item="tirage1" class="js-updatePrice" value="checkbox"> tirage 1 <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
             </div>
         </div>
         <div class="shop-tirage2" style="grid-column-start: span 4; display: grid; grid-template-columns: 1fr 1fr;">
@@ -188,16 +263,31 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
                 <button id="accept-btn" type="button"><a href="#shop">Ajouter au panier</a></button>
             </div>
         </div>
-    </div>
-            
+    </div>     
 </div>
         
+<!--
         <script src="js/imagesloaded.pkgd.min.js"></script>
 		<script src="js/scroll-effects.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-            
         <script src="js/anchor-scrolling.js"></script>
+-->
+        <script src="js/master.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+            
+        
             
             </div>
-            </main>
-    </body>
+        </div>
+         
+         
+        
+        </main>
+      
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+      <script type="text/javascript" src="js/anchor-scrolling.js"></script>
+<!--
+<script type="text/javascript" src="scripts/vendors/slider.js"></script>
+-->
+    <script type="text/javascript" src="js/master.js"></script>
+  </body>
+</html>
