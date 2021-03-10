@@ -3,7 +3,7 @@
 // ------------------------------
 
 function scrollNav() {
-  $('.section-links a').click(function(){  
+  $('.section-links-grid a').click(function(){  
     //Toggle Class
     $(".active").removeClass("active");      
     $(this).closest('li').addClass("active");
