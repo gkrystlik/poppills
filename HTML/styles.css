@@ -576,7 +576,7 @@ nav.grid-nav  ul.section-links-grid li {
     }
     
 ul li {
-    margin-right: 6px;
+    margin-right: 0px;
 }
 
 ul li a{
@@ -585,7 +585,7 @@ ul li a{
 } 
     
 ul li:last-child {
-        margin-right: 3px;
+        margin-right: 0px;
 }
 
 
