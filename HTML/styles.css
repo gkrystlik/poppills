@@ -521,7 +521,7 @@ button:focus {
 /*///////////////////////////////////   FOR MOBILE & TABLET    ////////////////////////////////////////////*/
 
 
-@media only screen and (max-width: 767px) || (max-device-width: 480px) {
+@media only screen and (max-width: 767px) {
 
 nav.grid-nav {
     display: grid;
