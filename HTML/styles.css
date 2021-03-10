@@ -36,6 +36,7 @@
     --02-brown-grey:#75726e;
     --03-darkbrown:rgb(102, 94, 86);
     --04-verydarkbrown:#454240;
+    
     --imgwidthmax:2500px;
     --overflow: 40px;
     --aspect-ratio: 1/1.5;
@@ -89,7 +90,6 @@ section {
 }
 
 .navigation{
-    grid-column-start: span 8;
     top: 0;
     background-color: black;
     position: -webkit-sticky;
@@ -98,23 +98,70 @@ section {
     font-family: "Gotham-Book";
     font-size: 1rem;
     color: white;
+/*    height: 60px;*/   
+}
+
+.sticky {
+    top: 0;
+    position: fixed;
+}
+
+
+nav.grid-nav {
+    z-index: 10000;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    text-transform: uppercase;
     height: 60px;
-    padding-top: 5px;
+}
+
+.logo-nav{
+    grid-column: span 2;
+    background-image: url(images/logo-header.svg);
+    object-fit: scale-down;
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* //////////////////////////  LINLS NAV   ////////////////////////// */
+
+.section-links-grid{
+    grid-column: span 4;
+    justify-content:center;
+    align-content: center;
+}
+
+
+ nav.grid-nav  ul.section-links-grid {
+     display: flex;
+    text-decoration:none;
+    }
+nav.grid-nav  ul.section-links-grid li {        
+        display: inline;
+        padding-top: 5px;
+    }
+/* //////////////////////////  END OF LINLS NAV   ////////////////////////// */
+
+.basket-title{
+    grid-column: span 1;
+    align-self: center;
+    justify-self: end;
+    padding-right: 8px;
+    font-family: "Garamond-Premier-Pro";
+    letter-spacing: 1px;
+    color: var(--02-brown-grey);
+    font-size: 1rem;
 }
 
 .shop-button{
     font-family: "Garamond-Premier-Pro-Smbd";
-    font-size: 1.2rem;
-    letter-spacing: 1.1px;
-     line-height: 1.2rem;
+    padding-top: 4px;
+    font-size: 2rem;
+    letter-spacing: 0px;
+    line-height: 1.2rem;
     color: white; 
     background-color: transparent;
-    text-align: right;
-}
-
-
-.basket{
-width: auto;
     text-align: right;
 }
 
@@ -123,49 +170,36 @@ width: auto;
 }
 
 
-.sticky {
-    top: 0;
-    position: fixed;
+.basket-total{
+    grid-column-start: -1;
+    grid-column: span 1;
+    align-self: center;
+    padding-left: 4px;
 }
-nav.flexbox {
-    z-index: 10000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 20px;
+
+
+ul li {
     margin-right: 20px;
-    text-transform: uppercase;
-    
+    list-style: none;
 }
-  nav.flexbox  ul {        
-        display: flex;
-        align-items: center;
-        text-decoration:none;
-    }
-
-    ul li {
-        margin-right: 20px;
-        list-style: none;
-}
-    ul li:last-child {
-            margin-right: 0px;
-        
-    }
-
-   ul li a{
-       opacity: 0.3;
-       transition: opacity .2s ease-in-out;
-       
-       
+ul li:last-child {
+        margin-right: 0px;
 }
 
-   ul li a:hover{
-       opacity: 1;
-       transition: opacity .3s ease-in-out;
+ul li a{
+   opacity: 0.5;
+   transition: opacity .2s ease-in-out;
 }
+
+ul li a:hover{
+   opacity: 1;
+   transition: opacity .3s ease-in-out;
+}
+
 ul li.active a{
     opacity: 1;
 }
+
 ul.commander{
     margin: 0;
     padding: 0;
@@ -175,6 +209,7 @@ ul.commander{
 .prix{
     font-family: "Garamond-Premier-Pro-Smbd";
 }
+
  a.commander-link {
     font-family: "Garamond-Premier-Pro-Smbd";
     font-size: 1.2rem;
@@ -190,8 +225,7 @@ ul.commander{
     opacity: 0.7;
     border-radius: 2px;
 }
-ul.section-links{
-}
+
 
 .grid-container {
     display: grid;
@@ -455,9 +489,10 @@ button:focus {
     align-items: center;
     z-index: 10;
     
-}.logo{
+}
+.logo{
     position: relative;
-    background-image: url(images/logo-sauvage.png);
+    background-image: url(images/logo-big.svg);
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -486,42 +521,131 @@ button:focus {
 /*///////////////////////////////////   FOR MOBILE & TABLET    ////////////////////////////////////////////*/
 
 
-@media only screen and (max-width: 1023px) {
-nav.flexbox {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    }
-    
+@media only screen and (max-width: 767px) {
 
-.fullwidth {
-    flex: 1 0 100%;
+nav.grid-nav {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    height: auto;
+}
+
+.logo-nav{
+    grid-column-start: 1;
+    grid-column: span 8;
+    grid-row-start: 1;
+    background-size: 25%;
+}
+
+    
+.section-links-grid{
+    grid-row-start: 2;
+    grid-column: span 8;
+    grid-row-end: 3;
     justify-content:center;
-    margin-bottom: 0px;
+    align-content: center;
+    font-size: 16px;
+    margin: 0;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    
+}
+.basket-title{
+    grid-column-start: 1;
+    grid-column: span 4;
+    grid-row-start: 3;
+    font-size: 16px;
+    padding-left: 0px;
+    justify-self: end;
+    padding-top: 12px;
+    padding-bottom: 16px;
+}
 
-   /* @media (min-width: 600px){
-        flex: 0 1 auto;
-    }*/
+.basket-total{
+    grid-row-start: 3;
+    grid-column-start: 5;
+    grid-column: span 4;   
+    padding-left: 4px;
+    padding-top: 12px;
+    padding-bottom: 16px;
+}
+    
+nav.grid-nav  ul.section-links-grid li {        
+        display: inline;
+        padding-top: 0px;
     }
     
-    ul li {
-        flex: 0 0 auto;
-        margin-right: 40px;
-    text-align: center;
-    }
+ul li {
+    margin-right: 40px;
+}
 
-    ul li:last-child {
-        margin-right: 10px;
-    }
+ul li a{
+   opacity: 0.6;
+   transition: opacity .2s ease-in-out;
+} 
+    
+ul li:last-child {
+        margin-right: 20px;
+}
 
+
+.shop-button{
+    padding-top: 2px;
+    font-size: 30px;
+    line-height: 1.2rem;
+    text-align: right;
+}
+
+    
+.credits{
+width: 100%;
+}
+
+h3{
+    font-size: 18px;
+}
+    
+h4{
+    font-size: 18px;
+}
+
+    
+ul.commander{
+    margin: 0;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+}
+    ul.commander li{
+        display: block;
+        width: 100%;
+padding: 20px 0px 20px 0px;
+        text-align: center;
+        
+}
+
+a.commander-link {
+    font-size: 3rem;
+    color: white; 
+    width: 100%;
+    opacity: 0.7;
+    height: 100px;
+    border-radius: 2px;
+    display: block;
+    padding: 40px;
+}
+    
+    
+/*
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
    grid-template-rows:auto;
     grid-gap: 0px 0px;
     }
+*/
 
+    
 .videos{
     grid-column-start: span 8;
 }
@@ -558,6 +682,7 @@ nav.flexbox {
 }
 .description-tirage{
     grid-column-start: span 8;
+    padding: 40px 40px 60px 40px;
 }
 
 .image-tirage{
