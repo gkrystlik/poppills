@@ -544,7 +544,7 @@ nav.grid-nav {
     grid-row-end: 3;
     justify-content:center;
     align-content: center;
-    font-size: 14px;
+    font-size: 16px;
     margin: 0;
     padding-top: 16px;
     padding-bottom: 8px;
@@ -576,7 +576,7 @@ nav.grid-nav  ul.section-links-grid li {
     }
     
 ul li {
-    margin-right: 8px;
+    margin-right: 14px;
 }
 
 ul li a{
@@ -585,7 +585,7 @@ ul li a{
 } 
     
 ul li:last-child {
-        margin-right: 4px;
+        margin-right: 12px;
 }
 
 
