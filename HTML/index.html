@@ -43,7 +43,44 @@
         </div>
         <div class="logowrapper"><div class="logo"></div></div>
     </div>
-   
+   <div class="navigation">
+                <nav class="grid-nav"> 
+                    <div class="logo-nav"><a href="#"></a></div>
+                    
+                    <ul class="section-links-grid fullwidth">
+                        <li><a href="#bookcontainer">Livre</a></li>
+                        <li><a href="#tshirt">t-shirt</a></li>
+                        <li><a href="#tirages">tirages</a></li>
+                        <li><a href="#shop-html-section">Boutique</a></li>
+                    </ul>
+
+                    <div class="basket-title fullwidth">
+                        <span>Régler</span>
+                    </div>
+                    <div class="basket-total fullwidth">
+                       <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="business" value="2CHD9W6FDM4MS">
+                            <input type="hidden" name="lc" value="EN">
+                            <input type="hidden" name="button_subtype" value="products">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="cn" value="Ajouter des instructions particulières pour le vendeur">
+                            <input type="hidden" name="no_shipping" value="2">
+                            <input type="hidden" name="rm" value="1">
+                            <input type="hidden" name="return" value="http://www.poppills.org/thanks.html">
+                            <input type="hidden" name="cancel_return" value="http://www.poppills.org/cancelled.html">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="upload" value="1">
+                            <div class="cart"></div>
+                            <button type="submit" class="shop-button js-submit is-visible">
+                              <span class="shop-button-price">0 €</span>
+<!--                              <span class="shop-button-text"><span>Go to check out!</span></span>-->
+                            </button>
+                          </form>
+                    </div>
+                </nav>
+            </div>
+<!--
     <div class="navigation">
                 <nav class="flexbox">       
                     <a href="#">Logo</a> 
@@ -73,7 +110,7 @@
                             <div class="cart"></div>
                             <button type="submit" class="shop-button js-submit is-visible">
                               <span class="shop-button-price">$0</span>
-<!--                              <span class="shop-button-text"><span>Go to check out!</span></span>-->
+                              <span class="shop-button-text"><span>Go to check out!</span></span>
                             </button>
 
                           </form>
@@ -81,10 +118,14 @@
                     </ul>
                 </nav>
             </div>
+-->
     <main>
      
         <div data-scroll>
-<div class="grid-container">            
+<div class="grid-container">  
+    
+    <!-- ////////////////// SECTION BOOK ////////////////// -->
+    
     <div class="image-book" id="bookcontainer">
         <div class="image-book-container">
                 <div class="imgwrapper">
@@ -122,6 +163,8 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
             
     </div>
     
+    <!-- ////////////////// SECTION VIDEOS ////////////////// -->
+    
      <div class="videos">
         
         <div class="videowrapper">
@@ -137,9 +180,12 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
     </div>
     
     <div class="imgparallax tshirt-col">
-        <div class="content__item-imgwrap"><div class="content__item-img" style="background-image: url(images/tshirt-parallax-2.jpg);"></div>
+        <div class="content__item-imgwrap"><div class="content__item-img" style="background-image: url(images/tshirt-parallax.jpg);"></div>
             </div>
     </div>
+    
+    <!-- ////////////////// SECTION TSHIRT ////////////////// -->
+    
     <div class="image-tshirt" id="tshirt">
         <div class="imgwrapper">
             <img src="images/tshirt-sauvage.png">
@@ -158,6 +204,9 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
         <div class="content__item-imgwrap"><div class="content__item-img" style="background-image: url(images/intro-tirages.jpg);"></div>
             </div>
     </div>
+    
+    <!-- ////////////////// SECTION TIRAGES ////////////////// -->
+    
     <div class="description-tirage" id="tirages">
             <div class="description">
                 <p>Production</p>
