@@ -569,7 +569,10 @@ nav.grid-nav {
     padding-top: 12px;
     padding-bottom: 16px;
 }
-    
+nav.grid-nav ul.section-links-grid{
+	padding-left:0;
+	padding-right:0;
+	}
 nav.grid-nav  ul.section-links-grid li {        
         display: inline;
         padding-top: 0px;
