@@ -617,9 +617,9 @@ ul.commander{
     justify-items: center;
 }
     ul.commander li{
-        display: block;
-        width: 100%;
-padding: 20px 0px 20px 0px;
+        /*display: block;
+        width: 100%;*/
+	padding: 20px 0px 20px 0px;
         text-align: center;
         
 }
