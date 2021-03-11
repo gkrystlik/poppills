@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <title>SAUVAGE - Le livre</title>
     <meta name="description" content="">
-    <meta name="viewport" content="initial-scale=1.0, maximum-scale=0.86, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      
     <!-- @stylesheet styles/master -->
 <!--    <link rel="stylesheet" type="text/css" href="master.css">-->
       <link rel="stylesheet" type="text/css" href="styles.css">
@@ -54,11 +55,11 @@
                         <li><a href="#tirages">tirages</a></li>
                         <li><a href="#shop-html-section">Boutique</a></li>
                     </ul>
-
-                    <div class="basket-title fullwidth">
+                    <div class="basket-grid">
+                    <span class="basket-title fullwidth">
                         <span>Régler</span>
-                    </div>
-                    <div class="basket-total fullwidth">
+                    </span>
+                    <span class="basket-total fullwidth">
                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
                             <input type="hidden" name="cmd" value="_cart">
                             <input type="hidden" name="business" value="2CHD9W6FDM4MS">
@@ -70,7 +71,7 @@
                             <input type="hidden" name="rm" value="1">
                             <input type="hidden" name="return" value="http://www.poppills.org/thanks.html">
                             <input type="hidden" name="cancel_return" value="http://www.poppills.org/cancelled.html">
-                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="currency_code" value="EUR">
                             <input type="hidden" name="upload" value="1">
                             <div class="cart"></div>
                             <button type="submit" class="shop-button js-submit is-visible">
@@ -78,6 +79,7 @@
 <!--                              <span class="shop-button-text"><span>Go to check out!</span></span>-->
                             </button>
                           </form>
+                    </span>
                     </div>
                 </nav>
             </div>
@@ -160,6 +162,7 @@ Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
 Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum.</p>
             </div>
         <div class="prix"><h2>35 €</h2></div>
+        <div class="fraisdeport"><h5>+ frais de port</h5></div>
         <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
             
     </div>
@@ -192,14 +195,23 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
             <img src="images/tshirt-sauvage.png">
         </div>
     </div>
+    
     <div class="description-tshirt description-book">
         <div class="decription">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+            <p>T-shirt coton bio 
             </p>
-                </div>
-            <div class="prix"><h2>15 €</h2></div>
-            <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
+            <h4>Production</h4>
+                    <ul class="product-details" style="padding-left: 0px;">
+                        <li>Coton bio</li>
+                        <li>Broderie poitrine</li>
+                        <li>Marque Stella & Santley</li>
+                        <li>Quantité limitée aux pré-commandes</li>
+                    </ul>
         </div>
+            <div class="prix"><h2>30 €</h2></div>
+            <div class="fraisdeport"><h5>+ frais de port</h5></div>
+            <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
+    </div>
 
     <div class="content__item imgparallax tirages">
         <div class="content__item-imgwrap"><div class="content__item-img" style="background-image: url(images/intro-tirages.jpg);"></div>
@@ -208,24 +220,29 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
     
     <!-- ////////////////// SECTION TIRAGES ////////////////// -->
     
+    
+    <div class="tirages-grid3">
+        <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage1.jpg"></div></div>
+        <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage2.jpg"></div></div>
+        <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage3.jpg"></div></div>
+    </div>
+   
     <div class="description-tirage" id="tirages">
             <div class="description">
-                <p>Production</p>
-                    <ul>
-                        <li>- Format 20x30 cm</li>
-                        <li>- Tirage lambda</li>
-                        <li>- Edition à 30 exemplaires</li>
-                        <li>- Numéroté & signé</li>
-                        <li>- Format 20x30 cm</li>
+                <h4>Production</h4>
+                    <ul class="product-details">
+                        <li>Format 20x30 cm</li>
+                        <li>Tirage lambda</li>
+                        <li>Edition à 30 exemplaires</li>
+                        <li>Numéroté & signé</li>
+                        <li>Format 20x30 cm</li>
                     </ul>
-                </div>
-            <div class="prix"><h2>150 €</h2></div>
-            <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
-        </div>
-    
-    <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage1.jpg"></div></div>
-    <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage2.jpg"></div></div>
-    <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage3.jpg"></div></div>
+                <div class="prix"><h2>135 €</h2></div>
+                <div class="fraisdeport"><h5 style="color: white; opacity: 0.3;">+ frais de port</h5></div>
+                <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
+             </div>
+            
+    </div>
     
     <div class="shop1" id="shop-html-section">
        
@@ -278,6 +295,9 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
                 </div>
             </div>
         </div>
+        
+<!-- ////////////////// SHOP - TIRAGES 1  ////////////////// -->
+        
         <div class="shop-tirage1" style="grid-column-start: span 4; display: grid; grid-template-columns: 1fr 1fr;">
             <div class="image-tirage">
                 <div class="imgwrapper"><img src="images/tirage1.jpg"></div>
@@ -288,32 +308,48 @@ Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor s
                         <div class="">
                               <p class="shop-price"><span class="shop-price-amount" data-price-usd="140" data-price-eur="150">€150</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
                         </div>
-                        <div class="S">
-                              <label for="tshirt-S"><input type="checkbox" id="tirage1" data-price-usd="140" data-price-eur="150" data-item="tirage1" class="js-updatePrice" value="checkbox"> tirage 1 <input type="number" class="js-updatePrice" value="1"></label>
+                        <div class="tirage">
+                              <label for="tirage1"><input type="checkbox" id="tirage1" data-price-usd="140" data-price-eur="135" data-item="tirage1" class="js-updatePrice" value="checkbox"> tirage 1 <input type="number" class="js-updatePrice" value="1"></label>
                         </div>
+                </div>
             </div>
-        </div>
+        </div>   
+<!-- ////////////////// SHOP - TIRAGES 2  ////////////////// -->
+        
         <div class="shop-tirage2" style="grid-column-start: span 4; display: grid; grid-template-columns: 1fr 1fr;">
             <div class="image-tirage">
                 <div class="imgwrapper"><img src="images/tirage2.jpg"></div>
                 <div class="decription">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+                       <div class="decription">
+                            <p>Tirage 2</p>
                         </div>
-                <div class="prix"><h2>150 €</h2></div>
-                <button id="accept-btn" type="button"><a href="#shop">Ajouter au panier</a></button>
+                        <div class="">
+                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="140" data-price-eur="150">€150</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        </div>
+                        <div class="tirage">
+                              <label for="tirage2"><input type="checkbox" id="tirage2" data-price-usd="140" data-price-eur="135" data-item="tirage2" class="js-updatePrice" value="checkbox"> tirage 2 <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                </div>
             </div>
-        </div>
+        </div> 
+   <!-- ////////////////// SHOP - TIRAGES 3  ////////////////// -->
+        
         <div class="shop-tirage3" style="grid-column-start: span 4; display: grid; grid-template-columns: 1fr 1fr;">
             <div class="image-tirage">
-                <div class="imgwrapper"><img src="images/tirage2.jpg"></div>
+                <div class="imgwrapper"><img src="images/tirage3.jpg"></div>
                 <div class="decription">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, </p>
+                       <div class="decription">
+                            <p>Tirage 3</p>
                         </div>
-                <div class="prix"><h2>150 €</h2></div>
-                <button id="accept-btn" type="button"><a href="#shop">Ajouter au panier</a></button>
+                        <div class="">
+                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="140" data-price-eur="150">€150</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        </div>
+                        <div class="tirage">
+                              <label for="tirage3"><input type="checkbox" id="tirage3" data-price-usd="140" data-price-eur="135" data-item="tirage2" class="js-updatePrice" value="checkbox"> tirage 3 <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                </div>
             </div>
         </div>
-    </div>     
 </div>
         
 <!--
