@@ -59,7 +59,13 @@ body {
     box-sizing: inherit;
 }
 
-
+p{
+    font-family: "Garamond-Premier-Pro";
+    font-size: 1.2rem;
+    line-height: 1rem;
+    letter-spacing: 0rem;
+    font-weight: 100;
+}
 a {
     position: relative;
     color: white;
@@ -178,14 +184,16 @@ nav.grid-nav  ul.section-links-grid li {
 }
 
 
-ul li {
+ul.section-links-grid li {
     margin-right: 20px;
     list-style: none;
 }
-ul li:last-child {
+ul.section-links-grid li:last-child {
         margin-right: 0px;
 }
-
+ul li{
+    list-style: none;
+}
 ul li a{
    opacity: 0.5;
    transition: opacity .2s ease-in-out;
@@ -205,9 +213,26 @@ ul.commander{
     padding: 0;
 }
 
+ul.product-details{
+    padding: 0px;
+    font-family: "Gotham-Book";
+    }
+
+ ul.product-details li{
+     margin-left: 100px;
+     padding-bottom: 4px;
+     width:230px;
+     text-align: left;
+    list-style-type:disc;    
+}
 
 .prix{
     font-family: "Garamond-Premier-Pro-Smbd";
+    padding-top: 12px;
+}
+.fraisdeport{
+padding-bottom: 28px;  
+    width: auto;
 }
 
  a.commander-link {
@@ -243,8 +268,9 @@ ul.commander{
     
 }
 .videowrapper > p{
-    font-family: Garamond-Premier-Pro-Smbd;
-
+    padding-bottom: 16px;
+/*    font-family: Garamond-Premier-Pro-Smbd;*/
+    
 }
 .videowrapper{
     position: relative;
@@ -326,18 +352,38 @@ ul.commander{
     
 }
 .description-tirage{
-    grid-column-start: span 3;
-    grid-row-start: span 3;
-/*    background-color:var(--blue);*/
+    grid-column-start: span 8;
+    background-color:var(--04-verydarkbrown);
+    color: white;
+    padding: 30px 40px 80px 40px;
+    
+    
+/*  width: 100%;  
+    background-color:var(--blue);*/
+}
+.description-tirage .description{
+    display: grid;
+    justify-items: center;
 }
 
+
+.tirages-grid3{
+     display: grid;
+    grid-column-start: span 8;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color:var(--04-verydarkbrown);
+    padding: 60px 40px 40px 40px;
+}
 .image-tirage{
     display: grid;
-    grid-column-start: span 5;
-/*    background-color:var(--pink);*/
-    justify-items: center;
-    padding-top: 40px;
+    grid-column:span 1;
+/*    background-color:var(--pink);
+     padding-top: 40px;
     padding-right: 160px;
+    */
+    
+    align-items: center;
+    justify-items: center;
 }
 
 .shop-wrapper { color: white; padding: 0; display: grid; grid-template-columns: 1fr;}
@@ -352,22 +398,17 @@ ul.commander{
 }
 
 
-.description-tirage {
-    padding-left: 40px;
-    padding-top: 40px;
-}
-.description-tirage ul {
-    list-style-type:square;
-    list-style-position: inside;
-    padding-inline-start: 0px;
-}
-
-
 
 .introduction{
     height: 400px;
 }
 
+h2{
+    font-size: 3rem;
+    margin: 0px;
+    padding: 0px;
+    line-height: 2.2rem;
+}
 
 h3{
     color: var(--03-darkbrown);
@@ -387,9 +428,12 @@ h4{
     opacity: 60%;
 }
 
-h2{
-    font-size: 3rem;
-    margin: 8px;
+h5{
+    color: var(--04-verydarkbrown);
+    font-size: 0.8rem;
+    padding-top: 0px;
+    padding-bottom: 4px;
+    margin: 0;
 }
 
 
@@ -425,6 +469,10 @@ button:focus {
 
 #accept-btn:hover {
   background-color: var(--04-verydarkbrown);
+}
+
+. .basket-grid{
+    
 }
 
 
@@ -526,15 +574,16 @@ button:focus {
 nav.grid-nav {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     height: auto;
 }
 
 .logo-nav{
-    grid-column-start: 1;
-    grid-column: span 8;
-    grid-row-start: 1;
+    grid-column-start: 3;
+    grid-column-end: 6;
+/*    grid-row-start: 1;*/
     background-size: 124px;
+    background-position: right;
 }
 
     
@@ -550,24 +599,31 @@ nav.grid-nav {
     padding-bottom: 8px;
     
 }
+    
+    .basket-grid{
+    grid-column-start: 6;
+    grid-column-end: 9;
+/*    background-color: aqua;*/
+    justify-self: end;
+    display: flex;
+    width: auto;
+    padding-right: 20px;
+    }
+    
 .basket-title{
-    grid-column-start: 1;
-    grid-column: span 4;
-    grid-row-start: 3;
-    font-size: 16px;
+/*    background-color: darkblue;*/
+    font-size: 18px;
     padding-left: 0px;
     justify-self: end;
-    padding-top: 12px;
-    padding-bottom: 16px;
+    padding-top: 16px;
+    padding-bottom: 8px;
 }
 
 .basket-total{
-    grid-row-start: 3;
-    grid-column-start: 5;
-    grid-column: span 4;   
-    padding-left: 12px;
-    padding-top: 12px;
-    padding-bottom: 16px;
+/*    background-color: blueviolet;*/
+    padding-left: 0px;
+    padding-top: 16px;
+    padding-bottom: 8px;
 }
 nav.grid-nav ul.section-links-grid{
 	padding-left:0;
@@ -588,13 +644,27 @@ ul li a{
 } 
     
 ul li:last-child {
-        margin-right: 12px;
+        margin-right: 0px;
 }
 
+ul.product-details{
+    padding: 0px;
+    }
 
+ ul.product-details li{
+     padding: 0;
+     padding-bottom: 4px;
+     margin: 0;
+     list-style-type: none;
+     list-style-position: outside;
+   width:inherit;
+     text-align: center;
+    
+}    
+    
 .shop-button{
-    padding-top: 2px;
-    line-height: 1.2rem;
+    font-size: 18px;
+    padding-top: 0;
     text-align: right;
 }
 
@@ -611,30 +681,46 @@ h4{
     font-size: 18px;
 }
 
+.description-tirage .description{
+    display: block;
+}
+
+
     
+.description .commander ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+
+    
+/*
 ul.commander{
     margin: 0;
     padding: 0;
     display: grid;
-    justify-items: center;
+    list-style:none;
+    background-color: aliceblue;
 }
-    ul.commander li{
-        /*display: block;
-        width: 100%;*/
+*/
+ul.commander li{
+    display: grid;
 	padding: 20px 0px 20px 0px;
-        text-align: center;
-        
+    text-align: center;
+    justify-items: center;
+    list-style:none;
 }
 
 a.commander-link {
-    font-size: 16px;
-    color: white; 
-    width: 80%;
-    opacity: 0.7;
-    height: 60px;
-    border-radius: 2px;
     display: block;
-    padding: 40px;
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    color: white; 
+    opacity: 0.8;
+    border-radius: 2px;
+    padding-top: 25px;
+    padding-bottom: 24px;
 }
     
     
@@ -684,6 +770,7 @@ a.commander-link {
 }
 .description-tirage{
     grid-column-start: span 8;
+    text-align: center;
     padding: 40px 40px 60px 40px;
 }
 
