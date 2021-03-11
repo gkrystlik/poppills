@@ -1,18 +1,21 @@
 var wWidth, wHeight;
-var euro = '€';
+var euro = ' €';
 var dollar = '$';
-var currency = 'USD';
-var sign = dollar;
+var currency = 'EUR';
+var sign = euro;
 //var $header = $('.header');
 //var $body = $('body');
 //var $shop = $('.shop');
 //var $popIn = $('.pop-in');
 var $form = $('form');
+var $basket = $('basket-grid');
 var $button = $('.shop-button');
 var $inputs = $('input[type="checkbox"]');
 var $cart = $('.cart');
 var $prices = $('.shop-price-amount');
 var $currencySwitch = $('.shop-currency');
+document.getElementsByClassName('basket-grid')[0].style.visibility = 'hidden';
+
 function onScroll(){
 	if($(window).scrollTop() > $('.credits').offset().top) { $header.addClass('is-visible'); } 
 	else { $header.removeClass('is-visible'); }
@@ -60,16 +63,18 @@ function updatePrice(){
 		}
 	});
 	if(total > 0) { 
-		$button.addClass('is-visible')
+//		$basket.addClass('is-visible');
+        document.getElementsByClassName('basket-grid')[0].style.visibility = 'visible';
 //		window.setTimeout(function(){
 //			$button.removeClass('animate'); 
 //		}, 500);
-		$button.find('.shop-button-price').text(sign + total); 
+		$button.find('.shop-button-price').text(total + sign); 
 	} 
 
 	else { 
-   // $button.removeClass('is-visible'); 
-    $button.find('.shop-button-price').text(sign +"0");
+//    $basket.removeClass('is-visible'); 
+    document.getElementsByClassName('basket-grid')[0].style.visibility = 'hidden';
+    $button.find('.shop-button-price').text("0"+ sign);
 }
 	
 }
