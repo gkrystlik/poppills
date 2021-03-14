@@ -1,856 +1,385 @@
-@font-face {
-  font-family: 'Gotham-Book';
-  src: url('fonts/Gotham-Book/Gotham-Book.eot?#iefix') format('embedded-opentype'),  url('fonts/Gotham-Book.otf')  format('opentype'),
-	     url('fonts/Gotham-Book/Gotham-Book.woff') format('woff'), url('fonts/Gotham-Book/Gotham-Book.ttf')  format('truetype'), url('fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-    font-family: 'Garamond-Premier-Pro';
-    src: url('fonts/Garamond/GaramondPremrPro.eot');
-    src: url('fonts/Garamond/GaramondPremrPro.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Garamond/GaramondPremrPro.woff2') format('woff2'),
-         url('fonts/Garamond/GaramondPremrPro.woff') format('woff'),
-         url('fonts/Garamond/GaramondPremrPro.ttf')  format('truetype'),
-         url('fonts/Garamond/GaramondPremrPro.svg#Garamond Premier Pro') format('svg');
-}
-
-@font-face {
-    font-family: 'Garamond-Premier-Pro-Smbd';
-    src: url('fonts/Garamond/GaramondPremrPro-Smbd.eot');
-    src: url('fonts/Garamond/GaramondPremrPro-Smbd.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Garamond/GaramondPremrPro-Smbd.woff2') format('woff2'),
-         url('fonts/Garamond/GaramondPremrPro-Smbd.woff') format('woff'),
-         url('fonts/Garamond/GaramondPremrPro-Smbd.ttf')  format('truetype'),
-         url('fonts/Garamond/GaramondPremrPro-Smbd.svg#Garamond Premier Pro Smbd') format('svg');
-}
-
-:root {
-    --pink: rgb(216, 29, 216);
-    --green: rgb(128, 216, 150);
-    --blue: rgb(0, 180, 200);
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SAUVAGE - Le livre</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      
+    <!-- @stylesheet styles/master -->
+<!--    <link rel="stylesheet" type="text/css" href="master.css">-->
+      <link rel="stylesheet" type="text/css" href="styles.css">
     
-    --01-lightbrown:#ece9e6;
-    --02-brown-grey:#75726e;
-    --03-darkbrown:rgb(102, 94, 86);
-    --04-verydarkbrown:#454240;
-    
-    --imgwidthmax:2500px;
-    --overflow: 40px;
-    --aspect-ratio: 1/1.5;
-    --imgwidth: calc(var(--imgwidthmax) * var(--aspect-ratio));
-}
-
-html {
-    font-size: 100%;    
-    box-sizing: border-box;
-}
-
-body {
-    scroll-snap-type: x mandatory;
-    margin: 0px;
-    padding: 0px;
-    min-height: 100vh;
-}
-
-*, *::before, *::after {
-    box-sizing: inherit;
-}
-
-p{
-    font-family: "Garamond-Premier-Pro";
-    font-size: 1.2rem;
-    line-height: 1rem;
-    letter-spacing: 0rem;
-    font-weight: 100;
-}
-a {
-    position: relative;
-    color: white;
-    text-decoration: none;
-}
-a:hover {
-    color: white;
-    
-}
-
-a::before {
-    /*content: "";
-    position: absolute;            
-    height: 3px;
-    right: 0px;
-    bottom: -3px;
-    left: 0px;
-    background-color: var(--linkPink);
-    */
-}
-
-section {
-    height: 100vh;
-    width: 100vw;
-    scroll-snap-align: start;
-    display: flex;
-    
-}
-
-.navigation{
-    top: 0;
-    background-color: black;
-    position: -webkit-sticky;
-    position: sticky;
-    z-index: 10000;
-    font-family: "Gotham-Book";
-    font-size: 1rem;
-    color: white;
-/*    height: 60px;*/   
-}
-
-.sticky {
-    top: 0;
-    position: fixed;
-}
-
-
-nav.grid-nav {
-    z-index: 10000;
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    text-transform: uppercase;
-    height: 60px;
-}
-
-.logo-nav{
-    grid-column: span 2;
-    background-image: url(images/logo-header.svg);
-    object-fit: scale-down;
-    background-size: 150px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-/* //////////////////////////  LINLS NAV   ////////////////////////// */
-
-.section-links-grid{
-    grid-column: span 4;
-    justify-content:center;
-    align-content: center;
-}
-
-
- nav.grid-nav  ul.section-links-grid {
-     display: flex;
-    text-decoration:none;
-    }
-nav.grid-nav  ul.section-links-grid li {        
-        display: inline;
-        padding-top: 5px;
-    }
-/* //////////////////////////  END OF LINLS NAV   ////////////////////////// */
-
-.basket-grid{
-    display: flex;
-    grid-column-start: 7;
-    grid-column: span 2;
-    justify-self: end;
-    padding-right: 40px;
-}
-
-.basket-title{
-    grid-column: span 1;
-    align-self: center;
-    justify-self: end;
-    padding-right: 8px;
-    font-family: "Garamond-Premier-Pro";
-    letter-spacing: 1px;
-    color: var(--02-brown-grey);
-    font-size: 1rem;
-    
-}
-
-.shop-button{
-    font-family: "Garamond-Premier-Pro-Smbd";
-    padding-top: 4px;
-    font-size: 1.1rem;
-    letter-spacing: 0.2px;
-    line-height: 1.2rem;
-    color: white; 
-    background-color: transparent;
-    text-align: right;
-}
-
-.shop-button-price{
-    text-align: right;
-    padding-left: 5px;
-}
-
-
-.basket-total{
-    grid-column-start: -1;
-    grid-column: span 1;
-    align-self: center;
-    padding-left: 4px;
-}
-
-
-ul.section-links-grid li {
-    margin-right: 20px;
-    list-style: none;
-}
-ul.section-links-grid li:last-child {
-        margin-right: 0px;
-}
-ul li{
-    list-style: none;
-}
-ul li a{
-   opacity: 0.5;
-   transition: opacity .2s ease-in-out;
-}
-
-ul li a:hover{
-   opacity: 1;
-   transition: opacity .3s ease-in-out;
-}
-
-ul li.active a{
-    opacity: 1;
-}
-
-ul.commander{
-    margin: 0;
-    padding: 0;
-}
-
-ul.product-details{
-    padding: 0px;
-    font-family: "Gotham-Book";
-    }
-
- ul.product-details li{
-     margin-left: 16px;
-     padding-bottom: 4px;
-     width:230px;
-     text-align: left;
-    list-style-type:disc;  
-     font-size: 0.8rem;
-}
-.description-tirage ul.product-details li{
-    margin-left: 0px;
-    text-align: center;
-    text-indent: center;
-    list-style-position: outisde;
-    list-style:none;
-}
-.prix{
-    font-family: "Garamond-Premier-Pro-Smbd";
-    padding-top: 12px;
-}
-.fraisdeport{
-    padding-top: 6px;
-    padding-bottom: 28px;  
-    width: auto;
-}
-
- a.commander-link {
-    font-family: "Garamond-Premier-Pro-Smbd";
-    font-size: 1.2rem;
-    letter-spacing: 1.1px;
-     line-height: 1.2rem;
-    color: white; 
-    display: block;
-    padding: 25px;  
-    background-color: var(--03-darkbrown);  
-    text-decoration: none; 
-    width: 200px; 
-    text-align: center;
-    opacity: 0.7;
-    border-radius: 2px;
-}
-
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-/*   grid-template-rows:auto;*/
-    grid-gap: 0px 0px;
-}
-
-
-
-.videos{
-    grid-column-start: 1;
-    grid-column-end: 9;
-    background-color:var(--01-lightbrown);
-    
-}
-.videowrapper > p{
-    padding-bottom: 16px;
-    line-height: 1.5rem;
-/*    font-family: Garamond-Premier-Pro-Smbd;*/
-    
-}
-.videowrapper{
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 12px;
-    height: 0px;
-    margin-left: 10vw;
-    margin-right: 10vw;
-    margin-top: 40px;
-    margin-bottom: 80px;
-}
-.videowrapper iframe{
-    position: absolute;
-    padding-bottom: 56px;
-}
-
-
-.image-book {
-/*    background-color:var(--blue);*/
-
-    grid-column-start: span 4;
-    text-align: center;
-    display: grid; 
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    align-items:flex-start;
-    justify-items: center;
-    
-    margin-bottom: 60px;
-}
-
-.image-book-container{
-    display: grid; 
-    justify-items: center;
-    padding-top: 60px;
-}
-
-.imgwrapper{
-    width: 90%;
-    height: auto;
-}
-.imgwrapper img{
-    object-fit:contain;
-    opacity: 100%;
-    width: 100%;
-    right: 0;
-}
-.credits{
-/*    width: 300px;*/
-}
-.description-book {
-    grid-column-start: span 4;
-/*    background-color:var(--pink);  */
-    padding: 60px 160px 20px 40px;
-}
-
-.description-book p {
-    font-family: "Garamond-Premier-Pro";
-    font-size: 1.2rem;
-    line-height: 1.8rem;
-    letter-spacing: 0.1rem;
-}
-
-.tshirt-col{
-}
-
-.image-tshirt {
-    grid-column-start: span 4;
-    background-color:var(--02-brown-grey);
-    grid-template-columns: 1fr;
-    display: grid;
-    align-items: center;
-    justify-items: center;
-}
-
-.description-tshirt {
-    grid-column-start: span 4;
-    background-color:var(--02-brown-grey);
-    
-}
-.description-tirage{
-    grid-column-start: span 8;
-    background-color:var(--04-verydarkbrown);
-    color: white;
-    padding: 30px 40px 80px 40px;
-    
-    
-/*  width: 100%;  
-    background-color:var(--blue);*/
-}
-.description-tirage .description{
-    display: grid;
-    justify-items: center;
-}
-
-
-.tirages-grid3{
-     display: grid;
-    grid-column-start: span 8;
-    grid-template-columns: 1fr 1fr 1fr;
-    background-color:var(--04-verydarkbrown);
-    padding: 60px 40px 40px 40px;
-}
-.image-tirage{
-    display: grid;
-    grid-column:span 1;
-/*    background-color:var(--pink);
-     padding-top: 40px;
-    padding-right: 160px;
-    */
-    
-    align-items: center;
-    justify-items: center;
-}
-
-.shop-wrapper { color: white; padding: 0; display: grid; grid-template-columns: 1fr;}
-.shop1{
-    margin-top: 120px;
-    grid-column-start: span 8;
-    background-color:var(--02-darkbrown);
-    display: grid;
-    grid-template-columns:repeat(12, 1fr);
-    align-items:flex-start;
-    justify-items: center;
-}
-
-
-
-.introduction{
-    height: 400px;
-}
-
-h2{
-    font-size: 3rem;
-    margin: 0px;
-    padding: 0px;
-    line-height: 2.2rem;
-}
-
-h3{
-    color: var(--03-darkbrown);
-    font-size: 0.8rem;
-    padding-top: 16px;
-    padding-bottom: 4px;
-    margin: 0;
-}
-
-h4{
-    color:black;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    padding-top: 2px;
-    padding-bottom: 4px;
-    margin: 0;
-    opacity: 60%;
-}
-
-h5{
-    font-family: "Gotham-Book";
-    font-size: 1rem;
-    color: black;
-    margin: 0;
-    padding: 20px 0 0 0;
-}
-
-h6{
-    color: var(--04-verydarkbrown);
-    font-size: 0.8rem;
-    padding-top: 0px;
-    padding-bottom: 4px;
-    margin: 0;
-}
-
-
-button:hover,
-button:focus {
-  cursor: pointer;
-}
-
-
- button {
-    padding: 0px;
-    border: 0px;    
-}
-
-
-/* Button Styling*/
-
-#accept-btn {
-    height: 60px;
-    width: 200px;
-  transition: background-color 0.5s ease;
-  color: white;
-  background-color: var(--03-darkbrown);
-}
-
-#accept-btn a{
-    position: relative;
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    font-family:serif;
-}
-
-#accept-btn:hover {
-  background-color: var(--04-verydarkbrown);
-}
-
-
-
-
-/*///////////////////////////////////   IMG PARALLAX STYLES    ////////////////////////////////////////////*/
-
-.imgparallax {
-    grid-column: 1/-1;
-    height: 100vh;/*
-    width: 100vw;
-    */
-    
-    scroll-snap-align: start;
-/*
-    background-color:var(--green);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-*/
-
-}
-
-.content__item-imgwrap {
-    position: relative;
-    overflow: hidden;
-    margin: 0 auto;
-    --imgwidth: 100%;
-    width: var(--imgwidth);
-    z-index: 8;
-    padding-bottom: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /*
-    background-color: aqua;
-*/
-}
-
-.content__item-img {
-	height: calc(140vh + (4 * var(--overflow)));
-	top: calc( -3 * var(--overflow));
-    width: 100%;
-	position: absolute;
-	background-size: cover;
-	background-position: 50% 0%;
-	will-change: transform;
-	opacity: 1;
-    
-}
-
-
-
-.logowrapper{
-    position: absolute;
-    top: 0px;
-    left: 0;
-    background-position: 0% 0%;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 10;
-    
-}
-.logo{
-    position: relative;
-    background-image: url(images/logo-big.svg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 50%;
-    height: 30vh;
-/*    background-color: blue;*/
-    z-index: 10;
-    
-}
-
-.tshirt-col .content__item-imgwrap, .tirages .content__item-imgwrap{
-    padding-bottom: 100vh;
-}
-
-/*
-.img-parallax {
-    object-fit:cover;
-    opacity: 100%;
-    width: 100%;
-    right: 0;
-}
-*/
-
-
-
-/*///////////////////////////////////   FOR MOBILE & TABLET    ////////////////////////////////////////////*/
-
-
-@media only screen and (max-width: 767px) {
-
-nav.grid-nav {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: 1fr 1fr;
-    height: auto;
-}
-
-.logo-nav{
-    grid-column-start: 3;
-    grid-column-end: 6;
-/*    grid-row-start: 1;*/
-    background-size: 124px;
-    background-position: right;
-}
-
-    
-.section-links-grid{
-    grid-row-start: 2;
-    grid-column: span 8;
-    grid-row-end: 3;
-    justify-content:center;
-    align-content: center;
-    font-size: 16px;
-    margin: 0;
-    padding-top: 16px;
-    padding-bottom: 8px;
-    
-}
-    
-    .basket-grid{
- position: fixed;
-    display: grid;
-    align-items: center;
-    align-self: center;
-    justify-items: center;
-    text-align: center;
-    height: 44px;
-    width: 90%;
-    margin: 20px;
-    padding: 1px;
-    bottom: 0px;
-    border-radius: 46px;
-    background-color: var(--04-verydarkbrown);
-/*
+  </head>
+  <body class="">
+<!--
+    <section class="shop">
+      
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_cart">
+        <input type="hidden" name="business" value="2CHD9W6FDM4MS">
+        <input type="hidden" name="lc" value="EN">
+        <input type="hidden" name="button_subtype" value="products">
+        <input type="hidden" name="no_note" value="0">
+        <input type="hidden" name="cn" value="Ajouter des instructions particulières pour le vendeur">
+        <input type="hidden" name="no_shipping" value="2">
+        <input type="hidden" name="rm" value="1">
+        <input type="hidden" name="return" value="http://www.poppills.org/thanks.html">
+        <input type="hidden" name="cancel_return" value="http://www.poppills.org/cancelled.html">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="upload" value="1">
+        <div class="cart"></div>
+        <button type="submit" class="shop-button js-submit is-visible">
+          <span class="shop-button-price">$0</span>
+          <span class="shop-button-text"><span>Go to check out!</span></span>
+        </button>
         
-    grid-column-start: 6;
-    grid-column-end: 9;
-    justify-self: end;
-    width: auto;
-    padding-right: 20px;
-    text-align: center;
-    padding-top: 8px;
-*/
-    }
-    
-.basket-title{
-/*    background-color: darkblue;*/
-    letter-spacing: 0px;
-    font-size: 15px;
-    padding-left: 0px;
-    justify-self: end;
-/*
-    padding-top: 16px;
-    padding-bottom: 8px;
-*/
-}
+      </form>
 
-.basket-total{
-/*    background-color: blueviolet;*/
-    padding-left: 0px;
-    padding-top: 12px;
-    padding-bottom: 16px;
-}
-nav.grid-nav ul.section-links-grid{
-	padding-left:0;
-	padding-right:0;
-	}
-nav.grid-nav  ul.section-links-grid li {        
-        display: inline;
-        padding-top: 0px;
-    }
-    
-ul li {
-    margin-right: 14px;
-}
+    </section>
+ -->   
 
-ul li a{
-   opacity: 0.6;
-   transition: opacity .2s ease-in-out;
-} 
-    
-ul li:last-child {
-        margin-right: 0px;
-}
+<!-- //////////////////////////////////////////-->
+          <div id="intro" class=" imgparallax intro">
+        <div class="content__item-imgwrap"><div class="content__item-img" style="background-image: url(images/intro-oiseaux.jpg);"></div>
+        </div>
+        <div class="logowrapper"><div class="logo"></div></div>
+    </div>
+   <div class="navigation">
+                <nav class="grid-nav"> 
+                    <div class="logo-nav"><a href="#"></a></div>
+                    
+                    <ul class="section-links-grid fullwidth">
+                        <li><a href="#bookcontainer">Livre</a></li>
+                        <li><a href="#tshirt">t-shirt</a></li>
+                        <li><a href="#tirages">tirages</a></li>
+                        <li><a href="#shop-html-section">Boutique</a></li>
+                    </ul>
+                    <div class="basket-grid">
+<!--                    <span class="basket-title fullwidth"></span>-->
+                    <span class="basket-total fullwidth">
+                       <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="business" value="2CHD9W6FDM4MS">
+                            <input type="hidden" name="lc" value="EN">
+                            <input type="hidden" name="button_subtype" value="products">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="cn" value="Ajouter des instructions particulières pour le vendeur">
+                            <input type="hidden" name="no_shipping" value="2">
+                            <input type="hidden" name="rm" value="1">
+                            <input type="hidden" name="return" value="http://www.poppills.org/thanks.html">
+                            <input type="hidden" name="cancel_return" value="http://www.poppills.org/cancelled.html">
+                            <input type="hidden" name="currency_code" value="EUR">
+                            <input type="hidden" name="upload" value="1">
+                            <div class="cart"></div>
+                            <button type="submit" class="shop-button js-submit is-visible">
+                                <span style="opacity: 0.5; text-transform: uppercase; padding-top: 10px">Régler</span>
+                              <span class="shop-button-price">0 €</span>
+<!--                              <span class="shop-button-text"><span>Go to check out!</span></span>-->
+                            </button>
+                          </form>
+                    </span>
+                    </div>
+                </nav>
+            </div>
+<!--
+    <div class="navigation">
+                <nav class="flexbox">       
+                    <a href="#">Logo</a> 
+                    <ul class="section-links fullwidth">
+                        <li><a href="#bookcontainer">Livre</a></li>
+                        <li><a href="#tshirt">t-shirt</a></li>
+                        <li><a href="#tirages">tirages</a></li>
+                        <li><a href="#shop-html-section">Boutique</a></li>
+                    </ul>
 
-ul.product-details{
-    padding: 0px;
-    }
+                    <ul class="basket fullwidth">
+                        <li>Régler</li>
+                        <li>
+                       <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="business" value="2CHD9W6FDM4MS">
+                            <input type="hidden" name="lc" value="EN">
+                            <input type="hidden" name="button_subtype" value="products">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="cn" value="Ajouter des instructions particulières pour le vendeur">
+                            <input type="hidden" name="no_shipping" value="2">
+                            <input type="hidden" name="rm" value="1">
+                            <input type="hidden" name="return" value="http://www.poppills.org/thanks.html">
+                            <input type="hidden" name="cancel_return" value="http://www.poppills.org/cancelled.html">
+                            <input type="hidden" name="currency_code" value="USD">
+                            <input type="hidden" name="upload" value="1">
+                            <div class="cart"></div>
+                            <button type="submit" class="shop-button js-submit is-visible">
+                              <span class="shop-button-price">$0</span>
+                              <span class="shop-button-text"><span>Go to check out!</span></span>
+                            </button>
 
- ul.product-details li{
-     padding: 0;
-     padding-bottom: 4px;
-     margin: 0;
-     list-style-type: none;
-     list-style-position: outside;
-   width:inherit;
-     text-align: center;
+                          </form>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+-->
+    <main>
+     
+        <div data-scroll>
+<div class="grid-container">  
     
-}    
+    <!-- ////////////////// SECTION BOOK ////////////////// -->
     
-.shop-button{
-    font-size: 18px;
-    padding-top: 0;
-    text-align: right;
-}
+    <div class="image-book" id="bookcontainer">
+        <div class="image-book-container">
+                <div class="imgwrapper">
+                    <img src="images/livre-sauvage.png">
+                </div>
+                <div class="credits">
+                    <h3>Photographie & textes</h3>
+                    <h4>BAPTISTE LIGNEL</h4>
+                    <h3>Textes</h3>
+                    <h4>GILLES CLÉMENT</h4>
+                    <h3>Illustrations</h3>
+                    <h4>JULIE TERRAZZONI</h4>
+                    <h3>Graphisme</h3>
+                    <h4>OLIVIER VESPIGNANI</h4>  
+                    <br>
+                    <h3>Site web</h3>
+                    <h4>GUILLAUME KRYSTLIK</h4>    
+                    <h3>Vidéos</h3>
+                    <h4>PABLO MALEK & MING LOURENÇO</h4> 
+                </div>
+        </div>
+    </div>
+    <div class="description-book">
+        <div class="decription">
+            <h1>Le livre</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
+<br><br>
+do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+<br><br>
+Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. 
+<br></p>
+            </div>
+            <h5>Production</h5>
+            <ul class="product-details" style="padding-left: 0px;">
+                        <li>180 pages</li>
+                        <li>60 photos + 4 illustratrions</li>
+                        <li>Papier certif. PFC</li>
+                        <li>Impression bichromie</li>
+                        <li>Couverture toilée</li>
+                    </ul>
+        <div class="prix"><h2>35 €</h2></div>
+        <div class="fraisdeport"><h6>+ frais de port</h6></div>
+        <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
+            
+    </div>
+    
+    <!-- ////////////////// SECTION VIDEOS ////////////////// -->
+    
+     <div class="videos">
+        
+        <div class="videowrapper">
+            <p>Le contenu et l’histoire du projet racontés par Gilles Clément et Baptiste Lignel</p>
+         <iframe width="100%" height="100%" class="video" src="https://www.youtube.com/embed/YXd5L3kRYfQ" frameborder="0" allowfullscreen></iframe>
+         </div>
+         
+        
+         <div class="videowrapper">
+             <p>La création du livre, racontée par Baptiste Lignel et Olivier Vespignani</p>
+         <iframe width="100%" height="100%" class="video" src="https://www.youtube.com/embed/YXd5L3kRYfQ" frameborder="0" allowfullscreen></iframe>
+         </div>
+    </div>
+    
+    <div class="imgparallax tshirt-col">
+        <div class="content__item-imgwrap"><div class="content__item-img" style="background-image: url(images/tshirt-parallax.jpg);"></div>
+            </div>
+    </div>
+    
+    <!-- ////////////////// SECTION TSHIRT ////////////////// -->
+    
+    <div class="image-tshirt" id="tshirt">
+        <div class="imgwrapper">
+            <img src="images/tshirt-sauvage.png">
+        </div>
+    </div>
+    
+    <div class="description-tshirt description-book">
+        <div class="decription">
+            <h1>Le t-shirt</h1>
+            <h5>Production</h5>
+                    <ul class="product-details" style="padding-left: 0px;">
+                        <li>Coton bio</li>
+                        <li>Broderie poitrine</li>
+                        <li>Marque Stella & Santley</li>
+                        <li>Quantité limitée aux pré-commandes</li>
+                    </ul>
+        </div>
+            <div class="prix"><h2>30 €</h2></div>
+            <div class="fraisdeport"><h6>+ frais de port</h6></div>
+            <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
+    </div>
 
+    <div class="content__item imgparallax tirages">
+        <div class="content__item-imgwrap"><div class="content__item-img" style="background-image: url(images/intro-tirages.jpg);"></div>
+            </div>
+    </div>
     
-.credits{
-width: 100%;
-}
-
-h3{
-    font-size: 15px;
-}
-    
-h4{
-    font-size: 15px;
-}
-
-.description-tirage .description{
-    display: block;
-}
-
-
-    
-.description .commander ul {
-    margin: 0;
-    padding: 0;
-    display: grid;
-}
-
-    
-/*
-ul.commander{
-    margin: 0;
-    padding: 0;
-    display: grid;
-    list-style:none;
-    background-color: aliceblue;
-}
-*/
-ul.commander li{
-    display: grid;
-	padding: 20px 0px 20px 0px;
-    text-align: center;
-    justify-items: center;
-    list-style:none;
-}
-
-a.commander-link {
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    text-align: center;
-    color: white; 
-    opacity: 0.8;
-    border-radius: 2px;
-    padding-top: 25px;
-    padding-bottom: 24px;
-}
+    <!-- ////////////////// SECTION TIRAGES ////////////////// -->
     
     
-/*
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-   grid-template-rows:auto;
-    grid-gap: 0px 0px;
-    }
-*/
-
+    <div class="tirages-grid3">
+        <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage1.jpg"></div></div>
+        <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage2.jpg"></div></div>
+        <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage3.jpg"></div></div>
+    </div>
+   
+    <div class="description-tirage" id="tirages">
+            <div class="description">
+                <h1>Les tirages</h1>
+                <h5>Production</h5>
+                    <ul class="product-details">
+                        <li>Tirage lambda</li>
+                        <li>Edition à 30 exemplaires</li>
+                        <li>Numéroté & signé</li>
+                        <li>Format 20x30 cm</li>
+                    </ul>
+                <div class="prix"><h2>135 €</h2></div>
+                <div class="fraisdeport"><h6 style="color: white; opacity: 0.3;">+ frais de port</h6></div>
+                <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
+             </div>
+            
+    </div>
     
-.videos{
-    grid-column-start: span 8;
-}
-
-.videowrapper > p{
-    text-align: center;
-    padding-bottom: 4px;
-/*    padding-top: 8px;*/
-}
-.image-book {
-    grid-column-start: span 8;
-}
-    
-.imgwrapper{
-    width: 100%;
-    padding-top: 40px;
-}  
-.imgwrapper img{
-/*
-    object-fit: cover;
-    height: 65vh;
-*/
-    }
-    
-.description-book {
-    grid-column-start: span 8;
-    text-align: center;
-    padding: 40px 40px 60px 40px;
-}
-
-.image-tshirt {
-    grid-column-start: span 8; 
-}
-
-.description-tshirt {
-    grid-column-start: span 8;
-    
-}
-.description-tirage{
-    grid-column-start: span 8;
-    text-align: center;
-    padding: 40px 40px 60px 40px;
-}
-
-.image-tirage{
-    grid-column-start: span 8;
-}
-
-.description-tirage {
-    text-align: center;
-    }
-}
-
-@media only screen and (max-width: 330px) {
-    
-    .section-links-grid{
-    grid-row-start: 2;
-    grid-column: span 8;
-    grid-row-end: 3;
-    justify-content:center;
-    align-content: center;
-    font-size: 14px;
-    margin: 0;
-    padding-top: 12px;
-    padding-bottom: 8px;
-    
-    }
-    
-    logo-nav{
-    grid-column-start: 3;
-    grid-column-end: 6;
-    background-size: 110px;
-    background-position: right;
-}
-    
-}
+    <div class="shop1" id="shop-html-section">
+       
+        <div class="shop-book" style="grid-column-start: span 6; display: grid; grid-template-columns: 1fr 1fr;">
+            <div class="shop-col-left" style="grid-column-start: span 1; display: grid; grid-template-columns: 1fr;">
+                <div class="imgwrapper">
+                    <img src="images/livre-sauvage.png">
+            </div>
+            </div>
+            <div class="shop-col-right" style="grid-column-start: span 1; display: grid; grid-template-columns: 1fr;">
+                <div>
+                        <div class="decription">
+                            <p>Livre Sauvage - 199 pages</p>
+                        </div>
+                        <div class="">
+                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="48" data-price-eur="35">€35</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        </div>
+                        <div class="">
+                              <label for="book"><input type="checkbox" id="book" data-price-usd="48" data-price-eur="35" data-item="Sauvage - Book" class="js-updatePrice" value="checkbox"> Acheter le livre <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="shop-tshirt" style="grid-column-start: span 6; display: grid; grid-template-columns: 1fr 1fr;">
+            <div class="shop-col-left" style="grid-column-start: span 1; display: grid; grid-template-columns: 1fr;">
+                <div class="imgwrapper">
+                    <img src="images/tshirt-sauvage.png">
+            </div>
+            </div>
+            <div class="shop-col-right" style="grid-column-start: span 1; display: grid; grid-template-columns: 1fr;">
+                <div>
+                        <div class="decription">
+                            <p>T-shirt coton bio</p>
+                        </div>
+                        <div class="">
+                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="48" data-price-eur="30">€30</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        </div>
+                        <div class="S">
+                              <label for="tshirt-S"><input type="checkbox" id="tshirtS" data-price-usd="48" data-price-eur="30" data-item="tshirtS" class="js-updatePrice" value="checkbox"> Size S <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                        <div class="M">
+                              <label for="tshirt-M"><input type="checkbox" id="tshirtM" data-price-usd="48" data-price-eur="30" data-item="tshirtM" class="js-updatePrice" value="checkbox"> Size M <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                        <div class="L">
+                              <label for="tshirt-L"><input type="checkbox" id="tshirtL" data-price-usd="48" data-price-eur="30" data-item="tshirtL" class="js-updatePrice" value="checkbox"> Size L <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                        <div class="">
+                              <label for="tshirt-XL"><input type="checkbox" id="tshirtXL" data-price-usd="48" data-price-eur="30" data-item="tshirtXL" class="js-updatePrice" value="checkbox"> Size XL <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+<!-- ////////////////// SHOP - TIRAGES 1  ////////////////// -->
+        
+        <div class="shop-tirage1" style="grid-column-start: span 4; display: grid; grid-template-columns: 1fr 1fr;">
+            <div class="image-tirage">
+                <div class="imgwrapper"><img src="images/tirage1.jpg"></div>
+                <div class="decription">
+                       <div class="decription">
+                            <p>Tirage 1</p>
+                        </div>
+                        <div class="">
+                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="140" data-price-eur="150">€150</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        </div>
+                        <div class="tirage">
+                              <label for="tirage1"><input type="checkbox" id="tirage1" data-price-usd="140" data-price-eur="150" data-item="tirage1" class="js-updatePrice" value="checkbox"> tirage 1 <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                </div>
+            </div>
+        </div>   
+<!-- ////////////////// SHOP - TIRAGES 2  ////////////////// -->
+        
+        <div class="shop-tirage2" style="grid-column-start: span 4; display: grid; grid-template-columns: 1fr 1fr;">
+            <div class="image-tirage">
+                <div class="imgwrapper"><img src="images/tirage2.jpg"></div>
+                <div class="decription">
+                       <div class="decription">
+                            <p>Tirage 2</p>
+                        </div>
+                        <div class="">
+                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="140" data-price-eur="150">€150</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        </div>
+                        <div class="tirage">
+                              <label for="tirage2"><input type="checkbox" id="tirage2" data-price-usd="140" data-price-eur="150" data-item="tirage2" class="js-updatePrice" value="checkbox"> tirage 2 <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                </div>
+            </div>
+        </div> 
+   <!-- ////////////////// SHOP - TIRAGES 3  ////////////////// -->
+        
+        <div class="shop-tirage3" style="grid-column-start: span 4; display: grid; grid-template-columns: 1fr 1fr;">
+            <div class="image-tirage">
+                <div class="imgwrapper"><img src="images/tirage3.jpg"></div>
+                <div class="decription">
+                       <div class="decription">
+                            <p>Tirage 3</p>
+                        </div>
+                        <div class="">
+                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="140" data-price-eur="150">€150</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        </div>
+                        <div class="tirage">
+                              <label for="tirage3"><input type="checkbox" id="tirage3" data-price-usd="140" data-price-eur="150" data-item="tirage2" class="js-updatePrice" value="checkbox"> tirage 3 <input type="number" class="js-updatePrice" value="1"></label>
+                        </div>
+                </div>
+            </div>
+        </div>
+</div>
+        
+<!--
+        <script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/scroll-effects.js"></script>
+        <script src="js/anchor-scrolling.js"></script>
+-->
+        <script src="js/master.js"></script>
+        <script src="js/jquery-1.11.1.min.js"></script>
+            
+        
+            
+            </div>
+        </div>
+         
+         
+        
+        </main>
+      
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+      <script type="text/javascript" src="js/anchor-scrolling.js"></script>
+<!--
+<script type="text/javascript" src="scripts/vendors/slider.js"></script>
+-->
+    <script type="text/javascript" src="js/master.js"></script>
+  </body>
+</html>
