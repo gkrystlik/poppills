@@ -766,7 +766,7 @@ button:focus {
     align-content: start;
     padding: 24px;
     height: -webkit-fill-available;
-    grid-template-rows: 32px 42px 42px 1fr;
+    grid-template-rows: 48px 42px 42px 1fr;
     width: auto;
 }
 
