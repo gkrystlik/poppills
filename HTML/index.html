@@ -12,32 +12,6 @@
     
   </head>
   <body class="">
-<!--
-    <section class="shop">
-      
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-        <input type="hidden" name="cmd" value="_cart">
-        <input type="hidden" name="business" value="2CHD9W6FDM4MS">
-        <input type="hidden" name="lc" value="EN">
-        <input type="hidden" name="button_subtype" value="products">
-        <input type="hidden" name="no_note" value="0">
-        <input type="hidden" name="cn" value="Ajouter des instructions particulières pour le vendeur">
-        <input type="hidden" name="no_shipping" value="2">
-        <input type="hidden" name="rm" value="1">
-        <input type="hidden" name="return" value="http://www.poppills.org/thanks.html">
-        <input type="hidden" name="cancel_return" value="http://www.poppills.org/cancelled.html">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="upload" value="1">
-        <div class="cart"></div>
-        <button type="submit" class="shop-button js-submit is-visible">
-          <span class="shop-button-price">$0</span>
-          <span class="shop-button-text"><span>Go to check out!</span></span>
-        </button>
-        
-      </form>
-
-    </section>
- -->   
 
 <!-- //////////////////////////////////////////-->
           <div id="intro" class=" imgparallax intro">
@@ -82,48 +56,9 @@
                     </div>
                 </nav>
             </div>
-<!--
-    <div class="navigation">
-                <nav class="flexbox">       
-                    <a href="#">Logo</a> 
-                    <ul class="section-links fullwidth">
-                        <li><a href="#bookcontainer">Livre</a></li>
-                        <li><a href="#tshirt">t-shirt</a></li>
-                        <li><a href="#tirages">tirages</a></li>
-                        <li><a href="#shop-html-section">Boutique</a></li>
-                    </ul>
-
-                    <ul class="basket fullwidth">
-                        <li>Régler</li>
-                        <li>
-                       <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="business" value="2CHD9W6FDM4MS">
-                            <input type="hidden" name="lc" value="EN">
-                            <input type="hidden" name="button_subtype" value="products">
-                            <input type="hidden" name="no_note" value="0">
-                            <input type="hidden" name="cn" value="Ajouter des instructions particulières pour le vendeur">
-                            <input type="hidden" name="no_shipping" value="2">
-                            <input type="hidden" name="rm" value="1">
-                            <input type="hidden" name="return" value="http://www.poppills.org/thanks.html">
-                            <input type="hidden" name="cancel_return" value="http://www.poppills.org/cancelled.html">
-                            <input type="hidden" name="currency_code" value="USD">
-                            <input type="hidden" name="upload" value="1">
-                            <div class="cart"></div>
-                            <button type="submit" class="shop-button js-submit is-visible">
-                              <span class="shop-button-price">$0</span>
-                              <span class="shop-button-text"><span>Go to check out!</span></span>
-                            </button>
-
-                          </form>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
--->
     <main>
      
-        <div data-scroll>
+
 <div class="grid-container">  
     
     <!-- ////////////////// SECTION BOOK ////////////////// -->
@@ -169,7 +104,7 @@ Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
                         <li>Couverture toilée</li>
                     </ul>
         <div class="prix"><h2>35 €</h2></div>
-        <div class="fraisdeport"><h6>+ frais de port</h6></div>
+        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
         <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
             
     </div>
@@ -215,7 +150,7 @@ Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
                     </ul>
         </div>
             <div class="prix"><h2>30 €</h2></div>
-            <div class="fraisdeport"><h6>+ frais de port</h6></div>
+            <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
             <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
     </div>
 
@@ -227,13 +162,13 @@ Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
     <!-- ////////////////// SECTION TIRAGES ////////////////// -->
     
     
-    <div class="tirages-grid3">
+    <div class="tirages-grid3" id="tirages">
         <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage1.jpg"></div></div>
         <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage2.jpg"></div></div>
         <div class="image-tirage"><div class="imgwrapper"><img src="images/tirage3.jpg"></div></div>
     </div>
    
-    <div class="description-tirage" id="tirages">
+    <div class="description-tirage">
             <div class="description">
                 <h1>Les tirages</h1>
                 <h5>Production</h5>
@@ -244,7 +179,7 @@ Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
                         <li>Format 20x30 cm</li>
                     </ul>
                 <div class="prix"><h2>135 €</h2></div>
-                <div class="fraisdeport"><h6 style="color: white; opacity: 0.3;">+ frais de port</h6></div>
+                <div class="fraisdeport"><h6 style="color: white; opacity: 0.3;">+ 5€ de frais de port</h6></div>
                 <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
              </div>
             
@@ -252,51 +187,71 @@ Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
     
     <div class="shop1" id="shop-html-section">
        
-        <div class="shop-book" style="grid-column-start: span 6; display: grid; grid-template-columns: 1fr 1fr;">
-            <div class="shop-col-left" style="grid-column-start: span 1; display: grid; grid-template-columns: 1fr;">
+        <div class="shop-item">
+            <div class="shop-image-item">
                 <div class="imgwrapper">
                     <img src="images/livre-sauvage.png">
-            </div>
-            </div>
-            <div class="shop-col-right" style="grid-column-start: span 1; display: grid; grid-template-columns: 1fr;">
-                <div>
-                        <div class="decription">
-                            <p>Livre Sauvage - 199 pages</p>
-                        </div>
-                        <div class="">
-                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="48" data-price-eur="35">€35</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
-                        </div>
-                        <div class="">
-                              <label for="book"><input type="checkbox" id="book" data-price-usd="48" data-price-eur="35" data-item="Sauvage - Book" class="js-updatePrice" value="checkbox"> Acheter le livre <input type="number" class="js-updatePrice" value="1"></label>
-                        </div>
                 </div>
             </div>
+            <div class="shop-details-item">
+                    <div class="commande-block">
+                        <div class="description">
+                            <p>Le livre Sauvage</p>
+                        </div>
+                        <div class="prix"><h2>35 €</h2></div>
+                        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+                        <div>
+                            <ul class="product-details" style="">
+                                <li>180 pages</li>
+                                <li>60 photos + 4 illustratrions</li>
+                                <li>Couverture toilée</li>
+                            </ul>
+                        </div>
+                        <div class="shop-list-wrapper">
+                            <ul class="shop-list">
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-0" data-price-eur="35" type="checkbox" data-item="book" value="checkbox">
+                                <label for="styled-checkbox-0">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="" style="font-family:'Gotham-Book'; font-size: 12px; "> exemplaire(s)</span>
+                              </li>
+                            </ul>
+                        </div>
+                </div>
+            
+            </div>
         </div>
-        <div class="shop-tshirt" style="grid-column-start: span 6; display: grid; grid-template-columns: 1fr 1fr;">
-            <div class="shop-col-left" style="grid-column-start: span 1; display: grid; grid-template-columns: 1fr;">
+        <div class="shop-item">
+            <div class="shop-image-item">
                 <div class="imgwrapper">
-                    <img src="images/tshirt-sauvage.png">
+                    <img src="images/tshirt-sauvage-shop.png">
             </div>
             </div>
-            <div class="shop-col-right" style="grid-column-start: span 1; display: grid; grid-template-columns: 1fr;">
-                <div>
-                        <div class="decription">
-                            <p>T-shirt coton bio</p>
+            <div class="shop-details-item">
+                <div class="commande-block">
+                        <div class="description">
+                            <p>Le T-shirt coton bio</p>
                         </div>
-                        <div class="">
-                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="48" data-price-eur="30">€30</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
-                        </div>
-                        <div class="S">
-                              <label for="tshirt-S"><input type="checkbox" id="tshirtS" data-price-usd="48" data-price-eur="30" data-item="tshirtS" class="js-updatePrice" value="checkbox"> Size S <input type="number" class="js-updatePrice" value="1"></label>
-                        </div>
-                        <div class="M">
-                              <label for="tshirt-M"><input type="checkbox" id="tshirtM" data-price-usd="48" data-price-eur="30" data-item="tshirtM" class="js-updatePrice" value="checkbox"> Size M <input type="number" class="js-updatePrice" value="1"></label>
-                        </div>
-                        <div class="L">
-                              <label for="tshirt-L"><input type="checkbox" id="tshirtL" data-price-usd="48" data-price-eur="30" data-item="tshirtL" class="js-updatePrice" value="checkbox"> Size L <input type="number" class="js-updatePrice" value="1"></label>
-                        </div>
-                        <div class="">
-                              <label for="tshirt-XL"><input type="checkbox" id="tshirtXL" data-price-usd="48" data-price-eur="30" data-item="tshirtXL" class="js-updatePrice" value="checkbox"> Size XL <input type="number" class="js-updatePrice" value="1"></label>
+                        <div class="prix"><h2>30 €</h2></div>
+                        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+                        
+                        <div class="shop-list-wrapper">
+                            <ul class="shop-list">
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-1" data-price-eur="30" type="checkbox" data-item="tshirt-S" value="checkbox">
+                                <label for="styled-checkbox-1">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="" style="font-family:'Gotham-Book'; font-size: 12px; "> Taille S</span>
+                              </li>
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-2" data-price-eur="30" type="checkbox" data-item="tshirt-M" value="checkbox">
+                                <label for="styled-checkbox-2">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="" style="font-family:'Gotham-Book'; font-size: 12px; "> Taille M</span>
+                              </li>
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-3" data-price-eur="30" type="checkbox" data-item="tshirt-L" value="checkbox">
+                                <label for="styled-checkbox-3">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="" style="font-family:'Gotham-Book'; font-size: 12px; "> Taille L</span>
+                              </li>
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-4" data-price-eur="30" type="checkbox" data-item="tshirt-XL" value="checkbox">
+                                <label for="styled-checkbox-4">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="" style="font-family:'Gotham-Book'; font-size: 12px; "> Taille XL</span>
+                              </li>
+                            </ul>
                         </div>
                 </div>
             </div>
@@ -304,58 +259,104 @@ Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
         
 <!-- ////////////////// SHOP - TIRAGES 1  ////////////////// -->
         
-        <div class="shop-tirage1" style="grid-column-start: span 4; display: grid; grid-template-columns: 1fr 1fr;">
+        <div class="shop-tirage">
             <div class="image-tirage">
                 <div class="imgwrapper"><img src="images/tirage1.jpg"></div>
-                <div class="decription">
-                       <div class="decription">
-                            <p>Tirage 1</p>
+            </div>
+                <div class="shop-details-item">
+                    <div class="commande-block">
+                        <div class="description">
+                            <p>Le tirage — Le paysage</p>
                         </div>
-                        <div class="">
-                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="140" data-price-eur="135">€135</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        <div class="prix"><h2>135 €</h2></div>
+                        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+                        <div class="product-description">
+                            <ul class="product-details">
+                                <li>Tirage lambda</li>
+                                <li>Edition à 30 exemplaires</li>
+                                <li>Numéroté & signé</li>
+                                <li>Format 20x30 cm</li>
+                            </ul>
                         </div>
-                        <div class="tirage">
-                              <label for="tirage1"><input type="checkbox" id="tirage1" data-price-usd="140" data-price-eur="135" data-item="tirage1" class="js-updatePrice" value="checkbox"> tirage 1 <input type="number" class="js-updatePrice" value="1"></label>
+                        <div class="shop-list-wrapper">
+                            <ul class="shop-list">
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-5" data-price-eur="35" type="checkbox" data-item="book" value="checkbox">
+                                <label for="styled-checkbox-5">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="" style="font-family:'Gotham-Book'; font-size: 12px; "> exemplaire(s)</span>
+                              </li>
+                            </ul>
                         </div>
                 </div>
             </div>
+            
         </div>   
 <!-- ////////////////// SHOP - TIRAGES 2  ////////////////// -->
         
-        <div class="shop-tirage2" style="grid-column-start: span 4; display: grid; grid-template-columns: 1fr 1fr;">
+        <div class="shop-tirage">
             <div class="image-tirage">
                 <div class="imgwrapper"><img src="images/tirage2.jpg"></div>
-                <div class="decription">
-                       <div class="decription">
-                            <p>Tirage 2</p>
+            </div>
+                <div class="shop-details-item">
+                    <div class="commande-block">
+                        <div class="description">
+                            <p>Le tirage — La flore</p>
                         </div>
-                        <div class="">
-                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="140" data-price-eur="135">€135</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        <div class="prix"><h2>135 €</h2></div>
+                        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+                        <div class="product-description">
+                            <ul class="product-details">
+                                <li>Tirage lambda</li>
+                                <li>Edition à 30 exemplaires</li>
+                                <li>Numéroté & signé</li>
+                                <li>Format 20x30 cm</li>
+                            </ul>
                         </div>
-                        <div class="tirage">
-                              <label for="tirage2"><input type="checkbox" id="tirage2" data-price-usd="140" data-price-eur="135" data-item="tirage2" class="js-updatePrice" value="checkbox"> tirage 2 <input type="number" class="js-updatePrice" value="1"></label>
+                        <div class="shop-list-wrapper">
+                            <ul class="shop-list">
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-5" data-price-eur="35" type="checkbox" data-item="book" value="checkbox">
+                                <label for="styled-checkbox-5">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="" style="font-family:'Gotham-Book'; font-size: 12px; "> exemplaire(s)</span>
+                              </li>
+                            </ul>
                         </div>
                 </div>
             </div>
+            
         </div> 
    <!-- ////////////////// SHOP - TIRAGES 3  ////////////////// -->
         
-        <div class="shop-tirage3" style="grid-column-start: span 4; display: grid; grid-template-columns: 1fr 1fr;">
+        <div class="shop-tirage">
             <div class="image-tirage">
                 <div class="imgwrapper"><img src="images/tirage3.jpg"></div>
-                <div class="decription">
-                       <div class="decription">
-                            <p>Tirage 3</p>
+            </div>
+                <div class="shop-details-item">
+                    <div class="commande-block">
+                        <div class="description">
+                            <p>Le tirage — Les oiseaux</p>
                         </div>
-                        <div class="">
-                              <p class="shop-price"><span class="shop-price-amount" data-price-usd="140" data-price-eur="135">€135</span> + <span class="shop-shipping-amount">€5</span> for shipping</p>
+                        <div class="prix"><h2>135 €</h2></div>
+                        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+                        <div class="product-description">
+                            <ul class="product-details">
+                                <li>Tirage lambda</li>
+                                <li>Edition à 30 exemplaires</li>
+                                <li>Numéroté & signé</li>
+                                <li>Format 20x30 cm</li>
+                            </ul>
                         </div>
-                        <div class="tirage">
-                              <label for="tirage3"><input type="checkbox" id="tirage3" data-price-usd="140" data-price-eur="135" data-item="tirage2" class="js-updatePrice" value="checkbox"> tirage 3 <input type="number" class="js-updatePrice" value="1"></label>
+                        <div class="shop-list-wrapper">
+                            <ul class="shop-list">
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-5" data-price-eur="35" type="checkbox" data-item="book" value="checkbox">
+                                <label for="styled-checkbox-5">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="" style="font-family:'Gotham-Book'; font-size: 12px; "> exemplaire(s)</span>
+                              </li>
+                            </ul>
                         </div>
                 </div>
             </div>
-        </div>
+            
+        </div> 
+        
 </div>
         
 <!--
@@ -369,9 +370,8 @@ Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan
         
             
             </div>
-        </div>
-         
-         
+
+           
         
         </main>
       
