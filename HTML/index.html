@@ -9,7 +9,18 @@
     <!-- @stylesheet styles/master -->
 <!--    <link rel="stylesheet" type="text/css" href="master.css">-->
       <link rel="stylesheet" type="text/css" href="styles.css">
-    
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.zoom.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+          $('ex1')
+            .wrap('<span style="display:inline-block"></span>')
+            .css('display', 'block')
+            .parent()
+            .zoom();
+        });
+      </script>
+      
   </head>
   <body class="">
 
@@ -70,21 +81,25 @@
                 </div>
                 <div class="credits">
                     <h3>Photographie & textes</h3>
-                    <h4>BAPTISTE LIGNEL</h4>
+                    <a href="https://www.instagram.com/baptistelignel/" target="_blank"><h4>BAPTISTE LIGNEL</h4></a>
                     <h3>Textes</h3>
-                    <h4>GILLES CLÉMENT</h4>
+                    <a href="http://www.gillesclement.com/" target="_blank"><h4>GILLES CLÉMENT</h4></a>
                     <h3>Illustrations</h3>
-                    <h4>JULIE TERRAZZONI</h4>
+                    <a href="https://www.julieterrazzoni.com/" target="_blank"><h4>JULIE TERRAZZONI</h4></a>
                     <h3>Graphisme</h3>
-                    <h4>OLIVIER VESPIGNANI</h4>  
+                    <a href="https://ovespi.com/" target="_blank"><h4>OLIVIER VESPIGNANI</h4></a>
                     <br>
-                    <h3>Site web</h3>
-                    <h4>GUILLAUME KRYSTLIK</h4>    
-                    <h3>Vidéos</h3>
-                    <h4>PABLO MALEK & MING LOURENÇO</h4> 
+                    <h3>Site internet</h3>
+                    <a href="https://www.guillaumekrystlik.com" target="_blank"><h4>GUILLAUME KRYSTLIK</h4></a>
+                    <h3>Équipe Vidéo</h3>
+                    <a href="http://vimeo.com/blopalante" target="_blank"><h4>PABLO MALEK</h4></a>
+                    <a href="http://kabukistudio.com/" target="_blank"><h4>MING FAI SHAM LOURENÇO</h4></a>
+                    <a href="#" target="_blank"><h4>Mehdi Brahamd</h4></a>
+                    <a href="#" target="_blank"><h4>Melissa Petitjean</h4></a>
                 </div>
         </div>
     </div>
+    
     <div class="description-book">
         <div class="decription">
             <h1>Le livre</h1>
@@ -174,15 +189,15 @@
     
     <div class="tirages-grid3" id="tirages">
         <div class="image-tirage">
-            <div class="imgwrapper"><img src="images/tirage1.jpg"></div>
+            <div class="imgwrapper" id="ex1" style="width: 400px"><img id="ex1" src="images/tirage1.jpg" width="400px"></div>
             <div><p>Ancienne mine d'argent. Ariège.</p></div>
         </div>
         <div class="image-tirage">
-            <div class="imgwrapper"><img src="images/tirage2.jpg"></div>
+            <div class="imgwrapper ex2"><img src="images/tirage2.jpg"></div>
             <div><p>Vierge Marie. Cilaos. Réunion.</p></div>
         </div>
         <div class="image-tirage">
-            <div class="imgwrapper"><img src="images/tirage3.jpg"></div>
+            <div class="imgwrapper ex3"><img src="images/tirage3.jpg"></div>
             <div><p>Migration d'étourneaux. Rhône.</p></div>
         </div>
     </div>
@@ -396,22 +411,27 @@
       <div class="container">
         <div class="row1">
           <div class="col-2">
-            <h6>About</h6>
-            <p><i>Sauvage</i> est un livre politique qui retrace les étapes du rapport de l’humain aux vivants: de la <b>peur</b> à la <b>maîtrise</b>, puis à <b>l’exploitation</b>. 
-		Des sentiments toujours présents, mais aussi les phases successives de l’histoire longue de l’humanité, 
-		qui l’ont mené à un système économique dominant catastrophique. Ce qui peut mener aujourd’hui au besoin de rentrer en <b>résistance</b>, et à penser d’autres rapports possibles.
-              </p>
+             <ul class="footer-links">
+              <li><h6>Photographies & textes</h6></li>
+              <li><a href="https://www.instagram.com/baptistelignel/" target="_blank">Baptiste Lignel</a></li> 
+              <li><h6>Textes</h6></li>
+              <li><a href="http://www.gillesclement.com/" target="_blank">Gilles Clément</a></li> 
+              <li><h6>Illustrations</h6></li>
+              <li><a href="https://www.julieterrazzoni.com/" target="_blank">Julie Terrazzoni</a></li>
+              <li><h6>Graphisme</h6></li>
+              <li><a href="https://ovespi.com/" target="_blank">Olivier Vespignani</a></li>
+              </ul>
           </div>
 
           <div class="col-2">
-            <h6>Contributors</h6>
             <ul class="footer-links">
-              <li><a href="#" target="_blank">Baptiste Lignel</a></li>
-              <li><a href="#" target="_blank">Gilles Clément</a></li>
-              <li><a href="#" target="_blank">Julie Terrazzoni</a></li>
-              <li><a href="https://guillaumekrystlik.com" target="_blank">Guillaume Krystlik</a></li>
-              <li><a href="#" target="_blank">Pablo Malek</a></li>
-              <li><a href="#" target="_blank">Ming Lourenço</a></li>
+              <li><h6>Site internet</h6></li>
+              <li><a href="https://www.guillaumekrystlik.com" target="_blank">Guillaume Krystlik</a></li> 
+              <li><h6>Équipe vidéo</h6></li>
+              <li><a href="http://vimeo.com/blopalante" target="_blank">Pablo Malek</a></li> 
+              <li><a href="http://kabukistudio.com/" target="_blank">Ming Fai Sham Lourenço</a></li>
+              <li><a href="#" target="_blank">Mehdi Brahamd</a></li>
+              <li><a href="#" target="_blank">Melissa Petitjean</a></li>
               </ul>
           </div>
         </div>
@@ -420,29 +440,18 @@
       <div class="container">
         <div class="row2">
           <div class="col-4">
-            <p>Copyright &copy; 2021 All Rights Reserved by <a href="#">Baptiste Lignel</a>.
+            <p>Copyright &copy; 2021 All Rights Reserved by Baptiste Lignel.
             </p>
         </div>
-
-<!--
-          <div class="col-md-4 col-sm-6 col-xs-12">
-            <ul class="social-icons">
-              <li><a class="facebook" href="#"></a></li>
-              <li><a class="twitter" href="#"></a></li>
-              <li><a class="dribbble" href="#"></a></li>
-              <li><a class="linkedin" href="#"></a></li>   
-            </ul>
-          </div>
--->
         </div>
       </div>
 </footer>
-      
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-      <script type="text/javascript" src="js/anchor-scrolling.js"></script>
+            <script type="text/javascript" src="js/anchor-scrolling.js"></script>
 <!--
 <script type="text/javascript" src="scripts/vendors/slider.js"></script>
 -->
     <script type="text/javascript" src="js/master.js"></script>
+      
+    
   </body>
 </html>
