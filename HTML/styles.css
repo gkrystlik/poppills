@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Gotham-Book';
-  src: url('fonts/Gotham-Book/Gotham-Book.eot?#iefix') format('embedded-opentype'),  url('fonts/Gotham-Book.otf')  format('opentype'),
+  src: url('fonts/Gotham-Book/Gotham-Book.eot?#iefix') format('embedded-opentype'),  url('fonts/Gotham-Book/Gotham-Book.otf')  format('opentype'),
 	     url('fonts/Gotham-Book/Gotham-Book.woff') format('woff'), url('fonts/Gotham-Book/Gotham-Book.ttf')  format('truetype'), url('fonts/Gotham-Book/Gotham-Book.svg#Gotham-Book') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -628,6 +628,7 @@ h5{
 }
 
 h6{
+    font-family: "Garamond-Premier-Pro";
     color: var(--04-verydarkbrown);
     font-size: 0.8rem;
     padding-top: 0px;
@@ -845,7 +846,7 @@ button:focus {
 }
 .site-footer .container .row1 .col-2{
     display: grid;
-    grid-column: span 2;
+    grid-column: span 1;
     align-self: flex-start;
 }
 .site-footer .container .row1 .col-2 p{
@@ -862,16 +863,20 @@ button:focus {
 }
 .site-footer h6 {
   color: #fff;
-  font-size: 16px;
+  font-size: 13px;
   text-transform: uppercase;
-  margin-top: 5px;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
+  opacity: 0.8;
+  margin: 0;
+  padding: 0;
+  padding-top: 12px;
+  line-height: 1rem;
 }
 .site-footer a {
-  color: #737373;
+  color: var(--01-lightbrown);
 }
 .site-footer a:hover {
-  color: #3366cc;
+  color: #ffffff;
   text-decoration: none;
 }
 .footer-links {
@@ -882,12 +887,12 @@ button:focus {
   display: block;
 }
 .footer-links a {
-  color: #737373;
+  color: var(--01-lightbrown);
 }
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-  color: #3366cc;
+  color: #ffffff;
   text-decoration: none;
 }
 .footer-links.inline li {
@@ -1025,19 +1030,17 @@ button:focus {
         font-size: 16px;
         }
       
-        .site-footer [class^="col-"] {
-        margin-bottom: 30px;
-        }
-      
+       
         
         /* FOOTER */
         .site-footer .container .row1 .col-2{
         grid-column: span 4;
+        text-align: center;
         }
         .site-footer .container .row2 .col-4 p{
         padding-bottom: 40px;
         line-height: 1.4rem;
-        
+        text-align: center;
         }
 }
 /*/////////////////////////////////// END 945 ///////////////////////////////////  */
@@ -1243,7 +1246,7 @@ button:focus {
         }
 
         .imgwrapper{
-            width: 100%;
+/*            width: 100%;*/
             padding-top: 40px;
         }  
         .imgwrapper img{
