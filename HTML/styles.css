@@ -393,6 +393,12 @@ ul.shop-list li{
   box-shadow: 1px 0 0 white, 0px 0 0 white, 3px 0 0 white, 3px -2px 0 white, 3px -4px 0 white, 3px -6px 0 white, 3px -8px 0 white;
   transform: rotate(45deg);
 }
+
+.input-text-after{
+    font-family:'Gotham-Book'; 
+    font-size: 12px;
+}
+
 /* //////////////////  END OF CHECKBOX  ////////////////// */
 
  a.commander-link {
@@ -764,7 +770,7 @@ button:focus {
     grid-template-columns: 1fr 1fr;
     background-color: var(--02-brown-grey);
     align-content: start;
-    padding: 24px;
+    padding: 24px 40px 24px 40px;
     height: -webkit-fill-available;
     grid-template-rows: 48px 42px 42px 1fr;
     width: auto;
@@ -835,7 +841,7 @@ button:focus {
         display: grid; 
         grid-template-columns: 1fr;
         justify-items: center;
-        margin: 0px 60px 0px 60px;
+        margin: 0px 10px 0px 10px;
     }
     .shop-details-item{
         grid-column-start: span 2; 
@@ -850,8 +856,114 @@ button:focus {
         grid-template-columns: 1fr;
         padding: 60px 40px 40px 40px;
     }
+    .shop-tirage .shop-details-item .commande-block{
+    width: 100%;
+    }
 }
 
+/*   */
+  @media only screen and (max-width: 945px) {
+      
+      .shop-item{
+          padding: 4px 40px 4px 40px;
+      }
+      .shop-image-item{
+          margin: 0;
+      }
+      .shop-image-item .imgwrapper{
+          width: 100%;
+      }
+        .shop-tirage .shop-details-item {
+         padding: 0px;
+        padding-bottom: 60px;
+        }
+    
+        .shop-tirage .shop-details-item .commande-block{
+        margin-top: 20px;
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr;
+        background-color: var(--02-brown-grey);
+        align-content: start;
+        padding: 24px;
+        height: -webkit-fill-available;
+        grid-template-rows: 1fr 60px 32px 1fr 1fr;
+        width: 100%;
+        }
+
+        .shop-tirage .shop-details-item .commande-block .description{
+        display: grid;
+        justify-self:center;
+/*        grid-column-start: 1;*/
+        grid-row-start: 1;
+        }
+
+        .shop-tirage .shop-details-item .commande-block .description p{
+        margin: 0;
+        text-align: center;
+        align-self: center;
+        }
+        .shop-tirage .shop-details-item .prix{
+        align-self: end;
+        padding-top: 0px;
+        grid-row-start: 2;
+        grid-column-start: 1;
+        }
+
+        .shop-tirage .shop-details-item .commande-block .fraisdeport{
+        padding-top: 0px;
+        display: grid;
+        grid-column-start: 1;
+        grid-row-start: 3;
+        }
+
+        .shop-tirage .shop-details-item .commande-block .product-description{
+        grid-row-start: 4;
+        grid-row: span 1;
+        justify-self: center;
+        }
+
+        .shop-tirage .shop-details-item .commande-block .prix{
+        align-self: center;
+        padding-top: 0px;
+        }
+
+        .shop-tirage .shop-details-item .commande-block .shop-list-wrapper{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        grid-row-start: 4;
+        width: 100%;
+        text-align: center;
+        grid-column: span 1;
+        margin-top: 8px;
+        grid-row-start: 5;
+        width: auto;
+        padding-left: 20px;
+        padding-right: 60px;
+        }
+        .shop-tirage .shop-details-item .commande-block ul.product-details {
+        padding: 0;
+        margin: 0;
+        }
+        .shop-tirage .shop-details-item .commande-block ul.product-details li{
+        text-align: center;
+        width: auto;
+        padding: 2px 0px 0px 0px;
+        }
+        .commande-block{
+        width: 100%;
+        }
+    
+        .styled-checkbox + label{
+        font-size: 16px;
+        width: auto;
+        }
+        .input-text-after{
+        font-size: 16px;
+        }
+      
+}
+/* */
 /*///////////////////////////////////   FOR MOBILE & TABLET    ////////////////////////////////////////////*/
 
 
@@ -1095,7 +1207,10 @@ button:focus {
             grid-column-start: span 12; 
             display: grid; 
             grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
             justify-items: center;
+            padding-bottom: 30px;
+            padding-top: 30px;
         }
     
         .shop-image-item{
@@ -1110,7 +1225,9 @@ button:focus {
             display: grid; 
             grid-template-columns: 1fr;
             width: 100%;
+            height: 300px;
             padding: 40px;
+            padding-bottom: 60px;
         }
         .shop-tirage{
             grid-column-start: 1; 
@@ -1119,17 +1236,8 @@ button:focus {
             grid-template-columns: 1fr;
             padding: 60px 40px 40px 40px;
         }
-        .shop-tirage .shop-details-item .commande-block{
-        width: 100%;
-        }
-        .commande-block{
-        width: 100%;
-        }
-    
-        .styled-checkbox + label{
-        font-size: 16px;
-        width: auto;
-        }
+        
+
 }
 
 
