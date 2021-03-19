@@ -431,18 +431,22 @@ ul.shop-list li{
     grid-column-start: 1;
     grid-column-end: 9;
     background-color:var(--01-lightbrown);
+    padding-bottom: 32px;
     
 }
 .videowrapper > p{
-    padding-bottom: 16px;
+    padding-bottom: 8px;
     line-height: 1.5rem;
-/*    font-family: Garamond-Premier-Pro-Smbd;*/
+    text-align: left;
+    font-family: Garamond-Premier-Pro-Smbd;
     
 }
 .videowrapper{
+    text-align: left;
+    font-family: Garamond-Premier-Pro-Smbd;
     position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 12px;
+    padding-bottom: 58.5%;
+    padding-top: 8px;
     height: 0px;
     margin-left: 10vw;
     margin-right: 10vw;
