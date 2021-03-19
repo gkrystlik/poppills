@@ -489,6 +489,15 @@ ul.shop-list li{
     width: 100%;
     right: 0;
 }
+.titre-tirage{
+        color: white;
+    text-transform: uppercase;
+    font-family: 'Garamond-Premier-Pro';
+    letter-spacing: 1.5px;
+    text-align: center;
+    line-height: 1.4rem;
+    }
+
 .credits{
 /*    width: 300px;*/
 }
