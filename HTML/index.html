@@ -13,11 +13,7 @@
     <script type="text/javascript" src="js/jquery.zoom.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
-          $('ex1')
-            .wrap('<span style="display:inline-block"></span>')
-            .css('display', 'block')
-            .parent()
-            .zoom();
+          $('#ex1').zoom();
         });
       </script>
       
@@ -189,7 +185,7 @@
     
     <div class="tirages-grid3" id="tirages">
         <div class="image-tirage">
-            <div class="imgwrapper" id="ex1" style="width: 400px"><img id="ex1" src="images/tirage1.jpg" width="400px"></div>
+            <div class="imgwrapper" id="ex1"><img id="ex1" src="images/tirage1.jpg"></div>
             <div><p>Ancienne mine d'argent. Ariège.</p></div>
         </div>
         <div class="image-tirage">
@@ -458,10 +454,7 @@
       </div>
 </footer>
             <script type="text/javascript" src="js/anchor-scrolling.js"></script>
-<!--
-<script type="text/javascript" src="scripts/vendors/slider.js"></script>
--->
-    <script type="text/javascript" src="js/master.js"></script>
+	    <script type="text/javascript" src="js/master.js"></script>
       
     
   </body>
