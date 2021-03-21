@@ -53,6 +53,9 @@ body {
     margin: 0px;
     padding: 0px;
     min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
 }
 
 *, *::before, *::after {
@@ -252,20 +255,7 @@ ul.product-details{
     padding-bottom: 28px;  
     width: auto;
 }
-/*
-checkbox{
-    margin: 0;
-    border: 0;
-}
-*/
 
-/*
-input,label {
-    font-family: "Gotham-Book";
-    margin: 0;
-    width: 200px;
-}
-*/
 ul.shop-list{
     padding: 0;
     margin: 0;
@@ -324,80 +314,196 @@ ul.shop-list li{
     list-style: none;
 }
 /* //////////////////  CHECKBOX  ////////////////// */
+
+
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+    input[type=checkbox],
+     input[type=radio] ,  input[type=number] {
+    --active: var(--03-darkbrown);
+    --active-inner: #fff;
+    --focus: 2px rgba(117, 114, 110, .3);
+    --border: rgb(102, 94, 86);
+    --border-hover: rgb(102, 94, 86);
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: rgb(102, 94, 86);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    font-family: "Gotham-Book";
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    }
+    input[type=checkbox]:after,
+    input[type=radio]:after, 
+    input[type=number]:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    }
+    input[type=checkbox]:checked,
+    input[type=radio]:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: .3s;
+    --d-t: .6s;
+    --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+    }
+    input[type=checkbox]:disabled,
+    input[type=radio]:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+    }
+    input[type=checkbox]:disabled:checked,
+    input[type=radio]:disabled:checked {
+    --b: var(--disabled-inner);
+    --bc: var(--border);
+    }
+    input[type=checkbox]:disabled + label,
+    input[type=radio]:disabled + label,
+    input[type=number]:disabled + label{
+    
+    cursor: not-allowed;
+    }
+    input[type=checkbox]:hover:not(:checked):not(:disabled),
+    input[type=radio]:hover:not(:checked):not(:disabled) {
+    --bc: var(--border-hover);
+    }
+    input[type=checkbox]:focus,
+    input[type=radio]:focus {
+    box-shadow: 0 0 0 var(--focus);
+    }
+    input[type=checkbox]:not(.switch),
+    input[type=radio]:not(.switch) {
+    width: 21px;
+    }
+    input[type=checkbox]:not(.switch):after,
+    input[type=radio]:not(.switch):after {
+    opacity: var(--o, 0);
+    }
+    input[type=checkbox]:not(.switch):checked,
+    input[type=radio]:not(.switch):checked {
+    --o: 1;
+    }
+    input[type=checkbox] + label,
+     input[type=radio] ,  input[type=number] + label {
+    font-family: "Gotham-Book";
+    font-size: 13px;
+    line-height: 24px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 0px;
+    margin-right: 4px;
+    }
+    
+    
+
+    input[type=checkbox]:not(.switch) {
+    border-radius: 3px;
+    }
+    input[type=checkbox]:not(.switch):after {
+    width: 5px;
+    height: 9px;
+    border: 2px solid var(--active-inner);
+    border-top: 0;
+    border-left: 0;
+    left: 7px;
+    top: 4px;
+    transform: rotate(var(--r, 20deg));
+    }
+    input[type=checkbox]:not(.switch):checked {
+    --r: 43deg;
+    }
+    input[type=checkbox].switch {
+    width: 38px;
+    border-radius: 11px;
+    }
+    input[type=checkbox].switch:after {
+    left: 2px;
+    top: 2px;
+    border-radius: 3px;
+    width: 15px;
+    height: 15px;
+    background: var(--ab, var(--border));
+    transform: translateX(var(--x, 0));
+    }
+    input[type=checkbox].switch:checked {
+    --ab: var(--active-inner);
+    --x: 17px;
+    }
+    input[type=checkbox].switch:disabled:not(:checked):after {
+    opacity: 0.6;
+    }
+
+     input[type=radio] ,  input[type=number] {
+    border-radius: 3px;
+    max-width: 32px;
+    }
+    input[type=radio]:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: var(--active-inner);
+    opacity: 0;
+    transform: scale(var(--s, 0.7));
+    }
+    input[type=radio]:checked {
+    --s: .5;
+    }
+    }
+   
+    html {
+    box-sizing: border-box;
+    }
+
+    * {
+    box-sizing: inherit;
+    }
+    *:before, *:after {
+    box-sizing: inherit;
+    }
+    
 .js-updatePrice{
     font-family: "Gotham-Book";
+     text-align: center;
+/*
     background-color: white;
     width: 28px;
     border: 1px solid grey;
     padding: 3px 0px 4px 0px;
     border-radius: 3px;
-    text-align: center;
+   
     vertical-align: baseline;
     margin: -4px 3px 3px 3px;
+*/
     vertical-align: unset;
     font-size: 11px;
 }
 
-.styled-checkbox {
-  position: absolute;
-  opacity: 0;
-}
-.styled-checkbox + label {
-  position: relative;
-  cursor: pointer;
-    display: inline-block;
-    padding: 0;
-    font-family: 'Gotham-Book';
-    vertical-align:unset;
-    padding-right: 4px;
-    width: 90px;
-    font-size: 12px;
-}
-.styled-checkbox + label:before {
-  content: "";
-  margin-right: 6px;
-  display: inline-block;
-  vertical-align:middle;
-  width: 20px;
-  height: 20px;
-  background: white;
-  border-radius: 3px;
-/*  border: 1px solid #ccc;*/
-
-}
-.styled-checkbox:hover + label:before {
-  background: #454240;
-}
-.styled-checkbox:focus + label:before {
-  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
-}
-.styled-checkbox:checked + label:before {
-  background: #454240;
-}
-.styled-checkbox:disabled + label {
-  color: #b8b8b8;
-  cursor: auto;
-}
-.styled-checkbox:disabled + label:before {
-  box-shadow: none;
-  background: #ddd;
-}
-.styled-checkbox:checked + label:after {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 9px;
-  background: white;
-  width: 2px;
-  height: 2px;
-  box-shadow: 1px 0 0 white, 0px 0 0 white, 3px 0 0 white, 3px -2px 0 white, 3px -4px 0 white, 3px -6px 0 white, 3px -8px 0 white;
-  transform: rotate(45deg);
-}
-
 .input-text-after{
-    font-family:'Gotham-Book'; 
-    font-size: 12px;
-}
+    font-family: "Gotham-Book";
+    font-size: 13px;
+    line-height: 24px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 3px;
+    margin-right: 4px;
+    }
+
 
 /* //////////////////  END OF CHECKBOX  ////////////////// */
 
@@ -423,6 +529,7 @@ ul.shop-list li{
     grid-template-columns: repeat(8, 1fr);
 /*   grid-template-rows:auto;*/
     grid-gap: 0px 0px;
+    z-index: 1;
 }
 
 
@@ -690,8 +797,20 @@ button:focus {
 /*///////////////////////////////////   IMG PARALLAX STYLES    ////////////////////////////////////////////*/
 
 .imgparallax {
+    position: relative;
     grid-column: 1/-1;
-    height: 100vh;/*
+    transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+    overflow: hidden;
+    height: 80vh;
+    text-align: center;
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: center;
+    transform: translateZ(-2px) scale(1);
+    z-index: -1;
+    /*
     width: 100vw;
     */
     
@@ -709,14 +828,12 @@ button:focus {
     position: relative;
     overflow: hidden;
     margin: 0 auto;
-    --imgwidth: 100%;
+--imgwidth: 100%;
     width: var(--imgwidth);
-    z-index: 8;
-    padding-bottom: 100vh;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: translateZ(-2px) scale(1);
+    z-index: -1;
+    height: 120vh;
+    background: url(images/intro-oiseaux.jpg);
     /*
     background-color: aqua;
 */
@@ -734,7 +851,9 @@ button:focus {
     
 }
 
-
+.content{
+    z-index: 2;
+}
 
 .logowrapper{
     position: absolute;
@@ -847,11 +966,14 @@ button:focus {
 
 /* FOOTER */
 .site-footer {
-  background-color: #26272b;
-  padding: 45px 40px 20px 40px;
+  background-color: #000000;
+  padding: 16px 40px 28px 40px;
   font-size: 15px;
   line-height: 24px;
   color: #737373;
+}
+.site-footer p{
+  font-family: "Gotham-book";
 }
 .site-footer .container .row1{
     display: grid;
@@ -866,17 +988,26 @@ button:focus {
     margin-right: 40px;
     line-height: 1.4rem;
 }
+.site-footer .container .row2 .col-4{
+    margin-top: 24px;
+    margin-bottom: 0px;
+}
+
+.site-footer .container .row2 .col-4 p{
+    font-size: 13px;
+}
 
 .site-footer hr {
   border-top-color: #bbb;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 .site-footer hr.small {
   margin: 20px 0;
 }
 .site-footer h6 {
+  font-family: "Gotham-book";
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 1.8px;
   opacity: 0.8;
@@ -886,6 +1017,8 @@ button:focus {
   line-height: 1rem;
 }
 .site-footer a {
+    font-size: 13px;
+  font-family: "Gotham-book";
   color: var(--01-lightbrown);
 }
 .site-footer a:hover {
@@ -1034,11 +1167,12 @@ button:focus {
         .commande-block{
         width: 100%;
         }
-    
-        .styled-checkbox + label{
+        
+        input[type=checkbox] + label,
+        input[type=radio] ,  input[type=number] + label {
         font-size: 16px;
-        width: auto;
         }
+    
         .input-text-after{
         font-size: 16px;
         }
@@ -1091,6 +1225,7 @@ button:focus {
             padding-bottom: 8px;
 
         }
+    
 
             .basket-grid{
          position: fixed;
@@ -1345,13 +1480,18 @@ button:focus {
             padding-top: 6px;
         }
     
-        .styled-checkbox + label{
-        font-size: 14px;
-        width: auto;
+        
+
+        input[type=checkbox] + label,
+         input[type=radio] ,  input[type=number] + label {
+        font-size: 13px;
         }
+
         .input-text-after{
-        font-size: 14px;
-        }
+            font-size: 13px;
+            }
+    
+
         .shop-tirage .shop-details-item .commande-block .shop-list-wrapper{
         padding-top: 20px;
         padding-bottom: 20px;
@@ -1398,13 +1538,16 @@ button:focus {
                 background-size: 110px;
                 background-position: right;
                 }
-                .styled-checkbox + label{
-                    font-size: 11px;
-                    width: auto;
-                    }
+                
+                input[type=checkbox] + label,
+                 input[type=radio] ,  input[type=number] + label {
+                font-size: 11px;
+                }
+    
                 .input-text-after{
                     font-size: 11px;
                     }
+    
                 .styled-checkbox + label{
                     padding-right: 0px;
                 }
