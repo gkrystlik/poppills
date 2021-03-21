@@ -3,9 +3,9 @@
 <head>
 	<meta charset='utf-8'/>
 	<title>Sauvage - Le livre</title>
-	<meta name="description" content="">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!--    <link rel="stylesheet" type="text/css" href="styles.css">-->
+    <link rel="stylesheet" type="text/css" href="styles2.css">
 	<style>
 		/* styles unrelated to zoom */
 /*		* { border:0; margin:0; padding:0; }*/
@@ -59,15 +59,19 @@
 
     
     <div id="intro" class="imgparallax intro">
-        <div class="content__item-imgwrap"><div class="content__item-img" style="background-image: url(../HTML/images/intro-oiseaux.jpg);"></div>
+        <div class="content__item-imgwrap">
+<!--
+            <div class="content__item-img" style="background-image: url(../HTML/images/intro-oiseaux.jpg);">
+            </div>
+-->
         </div>
         <div class="logowrapper"><div class="logo"></div></div>
     </div>
    <div class="navigation">
                 <nav class="grid-nav"> 
-                    <div class="logo-nav"><a href="#"></a></div>
+                    <div class="logo-nav scroll"><a href="#intro" style="display: block; width: 100%; height: 100%"></a></div>
                     
-                    <ul class="section-links-grid fullwidth">
+                    <ul class="section-links-grid scroll">
                         <li><a href="#bookcontainer">Livre</a></li>
                         <li><a href="#tshirt">t-shirt</a></li>
                         <li><a href="#tirages">tirages</a></li>
@@ -101,7 +105,7 @@
                 </nav>
             </div>
     
-    <main>
+    <main class="content">
     <div class="grid-container">  
     
     <!-- ////////////////// SECTION BOOK ////////////////// -->
@@ -138,7 +142,7 @@
         <p>
 		<i>Sauvage</i> est un livre politique qui retrace les étapes du rapport de l’humain aux vivants: de la <b>peur</b> à la <b>maîtrise</b>, puis à <b>l’exploitation</b>. 
 		Des sentiments toujours présents, mais aussi les phases successives de l’histoire longue de l’humanité, 
-		qui l’ont mené à un système économique dominant catastrophique. Ce qui peut mener aujourd’hui au besoin de rentrer en <b>résistance</b>, et à penser d’autres rapports possibles.
+		qui l’ont mené à un système économique dominant catastrophique. Ce qui invite aujourd’hui au besoin de rentrer en <b>résistance</b>, et à penser d’autres rapports possibles.
         <br><br>
 		<b>Gilles Clément</b> vous invite dès l’ouverture du livre à une promenade à travers une forêt onirique, et à travers ses réflexions. 
 		Le chevreuil qui vous y rencontrerez sera votre guide vers une immersion complète dans la vie, et loin du bruit. 
@@ -158,7 +162,7 @@
                         <li>60 photos + 4 illustratrions</li>
                         <li>Papier certif. PFC</li>
                         <li>Impression bichromie</li>
-                        <li>Couverture toilée</li>
+                        <li>Couverture toilée avec marquage à chaud</li>
                     </ul>
         <div class="prix"><h2>35 €</h2></div>
         <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
@@ -171,13 +175,13 @@
      <div class="videos">
         
         <div class="videowrapper">
-            <p>Le contenu et l’histoire du projet racontés par Gilles Clément et Baptiste Lignel</p>
+            <p>Entretien croisé entre Gilles Clément et Baptiste Lignel</p>
          <iframe width="100%" height="100%" class="video" src="https://www.youtube.com/embed/s38vK8XYnmo?rel=0&controls=2&modestbranding=1" frameborder="0" allowfullscreen></iframe>
          </div>
          
         
          <div class="videowrapper">
-             <p>La création du livre, racontée par Baptiste Lignel et Olivier Vespignani</p>
+             <p>Feuilletez le livre en entier</p>
          <iframe width="100%" height="100%" class="video" src="https://www.youtube.com/embed/F75fMh1Sb4s?rel=0&controls=2&modestbranding=1" frameborder="0" allowfullscreen></iframe>
          </div>
     </div>
@@ -222,15 +226,15 @@
     
             <div class="tirages-grid3" id="tirages">
                 <div class="image-tirage">
-                    <div class="imgwrapper" id="ex1"><img src="images/tirage1.jpg"></div>
+                    <div class="imgwrapper" id="ex1"><img src="images/Biros.jpg"></div>
                     <div class="titre-tirage"><p>Ancienne mine d'argent. Ariège.</p></div>
                 </div>
                 <div class="image-tirage">
-                    <div class="imgwrapper" id="ex2"><img src="images/tirage2.jpg"></div>
+                    <div class="imgwrapper" id="ex2"><img src="images/Reunion.jpg"></div>
                     <div class="titre-tirage"><p>Vierge Marie. Cilaos. Réunion.</p></div>
                 </div>
                 <div class="image-tirage">
-                    <div class="imgwrapper" id="ex3"><img src="images/tirage3.jpg"></div>
+                    <div class="imgwrapper" id="ex3"><img src="images/Cogny.jpg"></div>
                     <div class="titre-tirage"><p>Migration d'étourneaux. Rhône.</p></div>
                 </div>
             </div>
@@ -244,6 +248,7 @@
                                 <li>Edition à 30 exemplaires</li>
                                 <li>Numéroté & signé</li>
                                 <li>Format 20x30 cm</li>
+                                <li>Offre limitée aux pré-commandes</li>
                             </ul>
                         <div class="prix"><h2>135 €</h2></div>
                         <div class="fraisdeport"><h6 style="color: white; opacity: 0.3;">+ 5€ de frais de port</h6></div>
@@ -279,8 +284,8 @@
                         <div class="shop-list-wrapper">
                             <ul class="shop-list">
                               <li>
-                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-0" data-price-eur="35" type="checkbox" data-item="book" value="checkbox">
-                                <label for="styled-checkbox-0">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
+                                <input class="js-updatePrice" id="book" data-price-eur="35" type="checkbox" data-item="book" value="checkbox">
+                                <label for="book">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
                               </li>
                             </ul>
                         </div>
@@ -305,20 +310,20 @@
                         <div class="shop-list-wrapper">
                             <ul class="shop-list">
                               <li>
-                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-1" data-price-eur="30" type="checkbox" data-item="tshirt-S" value="checkbox">
-                                <label for="styled-checkbox-1">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille S</span>
+                                <input class="styled-checkbox js-updatePrice" id="tshirt-S" data-price-eur="30" type="checkbox" data-item="tshirt-S" value="checkbox">
+                                <label for="tshirt-S">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille S</span>
                               </li>
                               <li>
-                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-2" data-price-eur="30" type="checkbox" data-item="tshirt-M" value="checkbox">
-                                <label for="styled-checkbox-2">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille M</span>
+                                <input class="styled-checkbox js-updatePrice" id="tshirt-M" data-price-eur="30" type="checkbox" data-item="tshirt-M" value="checkbox">
+                                <label for="tshirt-M">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille M</span>
                               </li>
                               <li>
-                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-3" data-price-eur="30" type="checkbox" data-item="tshirt-L" value="checkbox">
-                                <label for="styled-checkbox-3">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille L</span>
+                                <input class="styled-checkbox js-updatePrice" id="tshirt-L" data-price-eur="30" type="checkbox" data-item="tshirt-L" value="checkbox">
+                                <label for="tshirt-L">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille L</span>
                               </li>
                               <li>
-                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-4" data-price-eur="30" type="checkbox" data-item="tshirt-XL" value="checkbox">
-                                <label for="styled-checkbox-4">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille XL</span>
+                                <input class="styled-checkbox js-updatePrice" id="tshirt-XL" data-price-eur="30" type="checkbox" data-item="tshirt-XL" value="checkbox">
+                                <label for="tshirt-XL">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille XL</span>
                               </li>
                             </ul>
                         </div>
@@ -330,7 +335,7 @@
                 
         <div class="shop-tirage">
             <div class="image-tirage">
-                <div class="imgwrapper"><img src="images/tirage1.jpg"></div>
+                <div class="imgwrapper"><img src="images/Biros.jpg"></div>
             </div>
                 <div class="shop-details-item">
                     <div class="commande-block">
@@ -350,8 +355,8 @@
                         <div class="shop-list-wrapper">
                             <ul class="shop-list">
                               <li>
-                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-5" data-price-eur="35" type="checkbox" data-item="book" value="checkbox">
-                                <label for="styled-checkbox-5">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
+                                <input class="styled-checkbox js-updatePrice" id="tirage1" data-price-eur="135" type="checkbox" data-item="tirage-ariege" value="checkbox">
+                                <label for="tirage1">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
                               </li>
                             </ul>
                         </div>
@@ -363,7 +368,7 @@
         
         <div class="shop-tirage">
             <div class="image-tirage">
-                <div class="imgwrapper"><img src="images/tirage2.jpg"></div>
+                <div class="imgwrapper"><img src="images/Reunion.jpg"></div>
             </div>
                 <div class="shop-details-item">
                     <div class="commande-block">
@@ -383,8 +388,8 @@
                         <div class="shop-list-wrapper">
                             <ul class="shop-list">
                               <li>
-                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-5" data-price-eur="35" type="checkbox" data-item="book" value="checkbox">
-                                <label for="styled-checkbox-5">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
+                                <input class="styled-checkbox js-updatePrice" id="tirage2" data-price-eur="135" type="checkbox" data-item="tirage-reunion" value="checkbox">
+                                <label for="tirage2">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
                               </li>
                             </ul>
                         </div>
@@ -396,7 +401,7 @@
         
         <div class="shop-tirage">
             <div class="image-tirage">
-                <div class="imgwrapper"><img src="images/tirage3.jpg"></div>
+                <div class="imgwrapper"><img src="images/Cogny.jpg"></div>
             </div>
                 <div class="shop-details-item">
                     <div class="commande-block">
@@ -416,8 +421,8 @@
                         <div class="shop-list-wrapper">
                             <ul class="shop-list">
                               <li>
-                                <input class="styled-checkbox js-updatePrice" id="styled-checkbox-5" data-price-eur="35" type="checkbox" data-item="book" value="checkbox">
-                                <label for="styled-checkbox-5">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
+                                <input class="styled-checkbox js-updatePrice" id="tirage3" data-price-eur="135" type="checkbox" data-item="tirage-rhone" value="checkbox">
+                                <label for="tirage3">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
                               </li>
                             </ul>
                         </div>
@@ -432,38 +437,9 @@
       <!-- Site footer -->
     <footer class="site-footer">
       <div class="container">
-        <div class="row1">
-          <div class="col-2">
-             <ul class="footer-links">
-              <li><h6>Photographies & textes</h6></li>
-              <li><a href="https://www.instagram.com/baptistelignel/" target="_blank">Baptiste Lignel</a></li> 
-              <li><h6>Textes</h6></li>
-              <li><a href="http://www.gillesclement.com/" target="_blank">Gilles Clément</a></li> 
-              <li><h6>Illustrations</h6></li>
-              <li><a href="https://www.julieterrazzoni.com/" target="_blank">Julie Terrazzoni</a></li>
-              <li><h6>Graphisme</h6></li>
-              <li><a href="https://ovespi.com/" target="_blank">Olivier Vespignani</a></li>
-              </ul>
-          </div>
-
-          <div class="col-2">
-            <ul class="footer-links">
-              <li><h6>Site internet</h6></li>
-              <li><a href="https://www.guillaumekrystlik.com" target="_blank">Guillaume Krystlik</a></li> 
-              <li><h6>Equipe vidéo</h6></li>
-              <li><a href="http://vimeo.com/blopalante" target="_blank">Pablo Malek</a></li> 
-              <li><a href="http://kabukistudio.com/" target="_blank">Ming Fai Sham Lourenço</a></li>
-              <li><a href="https://www.instagram.com/medhibrahamd/" target="_blank">Mehdi Brahamd</a></li>
-              <li><a href="#" target="_blank">Melissa Petitjean</a></li>
-              </ul>
-          </div>
-        </div>
-        <hr>
-      </div>
-      <div class="container">
         <div class="row2">
           <div class="col-4">
-            <p>Copyright &copy; 2021 All Rights Reserved by Baptiste Lignel.
+            <p><a href="mailto:contact@sauvage.photo">Contact</a> &copy; 2021 Tous droits réservés.
             </p>
         </div>
 
