@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<title>Sauvage - Le livre</title>
+	<link rel="icon" type="image/png" href="SVG-Ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="styles-cssScroll.css">
+    
+	<style>
+
+        .demo{
+            display: grid;
+            grid-column: span 2;
+        }
+        .zoom {
+			display:inline-block;
+			position: relative;
+            width: auto;  
+		}
+		.zoom img {
+			display: block;
+		}
+
+		.zoom img::selection { background-color: transparent; }
+
+	</style> 
+    <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+    <script src='js/jquery-1.11.1.min.js'></script>
+     
+	<script src='jquery.zoom.js'></script>
+	<script>
+		$(document).ready(function(){
+			$('#ex1').zoom();
+            $('#ex2').zoom();
+            $('#ex3').zoom();
+		});
+	</script>
+</head>
+<body>
+   
+
+    
+    <div id="intro" class="imgparallax intro">
+        <div class="content__item-imgwrap">
+           <div class="content__item-img oiseaux-img"> 
+            </div>
+        </div>
+        <div class="logowrapper"><div class="logo"></div></div>
+    </div>
+   <div class="navigation">
+                <nav class="grid-nav"> 
+                    <div class="logo-nav scroll"><a href="#intro" style="display: block; width: 100%; height: 100%"></a></div>
+                    
+                    <ul class="section-links-grid scroll">
+                        <li><a href="#bookcontainer">Livre</a></li>
+                        <li><a href="#tshirt">t-shirt</a></li>
+                        <li><a href="#tirages">tirages</a></li>
+                        <li><a href="#shop-html-section">Boutique</a></li>
+                    </ul>
+                    <div class="basket-grid">
+<!--                    <span class="basket-title fullwidth"></span>-->
+                    <span class="basket-total fullwidth">
+                       <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                            <input type="hidden" name="cmd" value="_cart">
+                            <input type="hidden" name="business" value="2CHD9W6FDM4MS">
+                            <input type="hidden" name="lc" value="EN">
+                            <input type="hidden" name="button_subtype" value="products">
+                            <input type="hidden" name="no_note" value="0">
+                            <input type="hidden" name="cn" value="Ajouter des instructions particulières pour le vendeur">
+                            <input type="hidden" name="no_shipping" value="2">
+                            <input type="hidden" name="rm" value="1">
+                            <input type="hidden" name="return" value="http://www.poppills.org/thanks.html">
+                            <input type="hidden" name="cancel_return" value="http://www.poppills.org/cancelled.html">
+                            <input type="hidden" name="currency_code" value="EUR">
+                            <input type="hidden" name="upload" value="1">
+                            <div class="cart"></div>
+                            <button type="submit" class="shop-button js-submit is-visible">
+                                <span style="opacity: 0.5; text-transform: uppercase; padding-top: 10px">Régler</span>
+                              <span class="shop-button-price">0 €</span>
+<!--                              <span class="shop-button-text"><span>Go to check out!</span></span>-->
+                            </button>
+                          </form>
+                    </span>
+                    </div>
+                </nav>
+            </div>
+    
+    <main class="content">
+    <div class="grid-container">  
+    
+    <!-- ////////////////// SECTION BOOK ////////////////// -->
+    
+    <div class="image-book" id="bookcontainer">
+        <div class="image-book-container">
+                <div class="imgwrapper">
+                    <img src="images/livre-sauvage.png">
+                </div>
+                <div class="credits">
+                    <h3>Photographie & textes</h3>
+                    <a href="https://www.instagram.com/baptistelignel/" target="_blank"><h4>BAPTISTE LIGNEL</h4></a>
+                    <h3>Textes</h3>
+                    <a href="http://www.gillesclement.com/" target="_blank"><h4>GILLES CLÉMENT</h4></a>
+                    <h3>Illustrations</h3>
+                    <a href="https://www.julieterrazzoni.com/" target="_blank"><h4>JULIE TERRAZZONI</h4></a>
+                    <h3>Graphisme</h3>
+                    <a href="https://ovespi.com/" target="_blank"><h4>OLIVIER VESPIGNANI</h4></a>
+                    <br>
+                    <h3>Site internet</h3>
+                    <a href="https://www.guillaumekrystlik.com" target="_blank"><h4>GUILLAUME KRYSTLIK</h4></a>
+                    <h3>Équipe Vidéos</h3>
+                    <a href="http://vimeo.com/blopalante" target="_blank"><h4>PABLO MALEK</h4></a>
+                    <a href="http://kabukistudio.com/" target="_blank"><h4>MING FAI SHAM LOURENÇO</h4></a>
+                    <a href="https://www.instagram.com/medhibrahamd/" target="_blank"><h4>Medhi Brahamd</h4></a>
+                    <a href="https://fr.wikipedia.org/wiki/M%C3%A9lissa_Petitjean" target="_blank"><h4>Melissa Petitjean</h4></a>
+                </div>
+        </div>
+    </div>
+    
+    <div class="description-book">
+        <div class="decription">
+            <h1>Le livre</h1>
+        <p>
+		<i>Sauvage</i> est un livre politique qui retrace les étapes du rapport de l’humain aux vivants: de la <b>peur</b> à la <b>maîtrise</b>, puis à <b>l’exploitation</b>. 
+		Des sentiments toujours présents, mais aussi les phases successives de l’histoire longue de l’humanité, 
+		qui l’ont mené à un système économique dominant catastrophique. Ce qui invite aujourd’hui au besoin de rentrer en <b>résistance</b>, et à penser d’autres rapports possibles.
+        <br><br>
+		<b>Gilles Clément</b> vous invite dès l’ouverture du livre à une promenade à travers une forêt onirique, et à travers ses réflexions. 
+		Le chevreuil qui vous y rencontrerez sera votre guide vers une immersion complète dans la vie, et loin du bruit. 
+		Une poésie saupoudrée sur le reste du livre à travers de piquantes notices botaniques.
+        <br><br>
+		<b>Baptiste Lignel</b> a arpenté la France -métropolitaine et ultramarine- pour raconter en photographies les manières et le lieux où le concept de « sauvage » a pu servir d’alibi moral à l’exploitation. 
+		Exploitation des autres humains, comme des animaux, comme des végétaux. 
+		La poésie graphique de ses images fonctionne de pair avec la précision journalistique de leurs légendes.
+        <br><br>
+		En passant par la forme classique de la photographie de paysage en noir et blanc, <i>Sauvage</i> est un livre qui pose des questions âprement contemporaines.
+
+	</p>
+            </div>
+            <h5>Production</h5>
+            <ul class="product-details" style="padding-left: 0px;">
+                        <li>180 pages</li>
+                        <li>60 photos + 4 illustratrions</li>
+                        <li>Papier certif. PFC</li>
+                        <li>Impression bichromie</li>
+                        <li>Couverture toilée avec marquage à chaud</li>
+                    </ul>
+        <div class="prix"><h2>35 €</h2></div>
+        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+        <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
+            
+    </div>
+    
+    <!-- ////////////////// SECTION VIDEOS ////////////////// -->
+    
+     <div class="videos">
+        
+        <div class="videowrapper">
+            <p>Entretien croisé entre Gilles Clément et Baptiste Lignel</p>
+         <iframe width="100%" height="100%" class="video" src="https://www.youtube.com/embed/s38vK8XYnmo?rel=0&controls=2&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+         </div>
+         
+        
+         <div class="videowrapper">
+             <p>Feuilletez le livre en entier</p>
+         <iframe width="100%" height="100%" class="video" src="https://www.youtube.com/embed/F75fMh1Sb4s?rel=0&controls=2&modestbranding=1" frameborder="0" allowfullscreen></iframe>
+         </div>
+    </div>
+    
+    <div class="imgparallax tshirt-col">
+        <div class="content__item-imgwrap">
+            <div class="content__item-img tshirt-img"></div>
+            </div>
+    </div>
+    
+    <!-- ////////////////// SECTION TSHIRT ////////////////// -->
+    
+    <div class="image-tshirt" id="tshirt">
+        <div class="imgwrapper">
+            <img src="images/tshirt-sauvage.png">
+        </div>
+    </div>
+    
+    <div class="description-tshirt description-book">
+        <div class="decription">
+            <h1>Le t-shirt</h1>
+            <h5>Production</h5>
+                    <ul class="product-details" style="padding-left: 0px;">
+                        <li>Coton bio</li>
+                        <li>Broderie poitrine</li>
+                        <li>Marque Stella & Santley</li>
+                        <li>Quantité limitée aux pré-commandes</li>
+                    </ul>
+        </div>
+            <div class="prix"><h2>30 €</h2></div>
+            <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+            <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
+    </div>
+
+    <div class="content__item imgparallax tirages">
+         <div class="content__item-imgwrap">
+            <div class="content__item-img tirage-img"></div>
+            </div>
+    </div>
+        
+        
+ <!-- ////////////////// SECTION TIRAGES ////////////////// -->
+    
+    
+            <div class="tirages-grid3" id="tirages">
+                <div class="image-tirage">
+                    <div class="imgwrapper" id="ex1"><img src="images/Biros.jpg"></div>
+                    <div class="titre-tirage"><p>Ancienne mine d'argent.<br>Ariège.</p></div>
+                </div>
+                <div class="image-tirage">
+                    <div class="imgwrapper" id="ex2"><img src="images/Reunion.jpg"></div>
+                    <div class="titre-tirage"><p>Vierge Marie. Cilaos.<br>La Réunion.</p></div>
+                </div>
+                <div class="image-tirage">
+                    <div class="imgwrapper" id="ex3"><img src="images/Cogny.jpg"></div>
+                    <div class="titre-tirage"><p>Migration d'étourneaux.<br>Rhône.</p></div>
+                </div>
+            </div>
+
+            <div class="description-tirage">
+                    <div class="description">
+                        <h1>Les tirages</h1>
+                        <h5>Production</h5>
+                            <ul class="product-details">
+                                <li>Tirage lambda</li>
+                                <li>Edition à 30 exemplaires</li>
+                                <li>Numéroté & signé</li>
+                                <li>Format 20x30 cm</li>
+                                <li>Offre limitée aux pré-commandes</li>
+                            </ul>
+                        <div class="prix"><h2>135 €</h2></div>
+                        <div class="fraisdeport"><h6 style="color: white; opacity: 0.3;">+ 5€ de frais de port</h6></div>
+                        <ul class="commander"><li><a href="#shop-html-section" class="commander-link">COMMANDER</a></li></ul>
+                     </div>
+
+            </div>     
+        
+            <!-- ////////////////// SECTION SHOP ////////////////// -->
+    
+    <div class="shop1" id="shop-html-section">
+       
+        <div class="shop-item">
+            <div class="shop-image-item">
+                <div class="imgwrapper">
+                    <img src="images/livre-sauvage.png">
+                </div>
+            </div>
+            <div class="shop-details-item">
+                    <div class="commande-block">
+                        <div class="description">
+                            <p>Le livre Sauvage</p>
+                        </div>
+                        <div class="prix"><h2>35 €</h2></div>
+                        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+                        <div>
+                            <ul class="product-details" style="">
+                                <li>180 pages</li>
+                                <li>60 photos + 4 illustratrions</li>
+                                <li>Couverture toilée</li>
+                            </ul>
+                        </div>
+                        <div class="shop-list-wrapper">
+                            <ul class="shop-list">
+                              <li>
+                                <input class="js-updatePrice" id="book" data-price-eur="35" type="checkbox" data-item="livre" value="checkbox">
+                                <label for="book">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
+                              </li>
+                            </ul>
+                        </div>
+                </div>
+            
+            </div>
+        </div>
+        <div class="shop-item">
+            <div class="shop-image-item">
+                <div class="imgwrapper">
+                    <img src="images/tshirt-sauvage-shop.png">
+            </div>
+            </div>
+            <div class="shop-details-item">
+                <div class="commande-block">
+                        <div class="description">
+                            <p>Le T-shirt coton bio</p>
+                        </div>
+                        <div class="prix"><h2>30 €</h2></div>
+                        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+                        
+                        <div class="shop-list-wrapper">
+                            <ul class="shop-list">
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="tshirt-S" data-price-eur="30" type="checkbox" data-item="tshirt-S" value="checkbox">
+                                <label for="tshirt-S">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille S</span>
+                              </li>
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="tshirt-M" data-price-eur="30" type="checkbox" data-item="tshirt-M" value="checkbox">
+                                <label for="tshirt-M">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille M</span>
+                              </li>
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="tshirt-L" data-price-eur="30" type="checkbox" data-item="tshirt-L" value="checkbox">
+                                <label for="tshirt-L">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille L</span>
+                              </li>
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="tshirt-XL" data-price-eur="30" type="checkbox" data-item="tshirt-XL" value="checkbox">
+                                <label for="tshirt-XL">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> Taille XL</span>
+                              </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+        
+<!-- ////////////////// SHOP - TIRAGES 1  ////////////////// -->
+                
+        <div class="shop-tirage">
+            <div class="image-tirage">
+                <div class="imgwrapper"><img src="images/Biros.jpg"></div>
+            </div>
+                <div class="shop-details-item">
+                    <div class="commande-block">
+                        <div class="description">
+                            <p>Ariège</p>
+                        </div>
+                        <div class="prix"><h2>135 €</h2></div>
+                        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+                        <div class="product-description">
+                            <ul class="product-details">
+                                <li>Tirage lambda</li>
+                                <li>Edition à 30 exemplaires</li>
+                                <li>Numéroté & signé</li>
+                                <li>Format 20x30 cm</li>
+                            </ul>
+                        </div>
+                        <div class="shop-list-wrapper">
+                            <ul class="shop-list">
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="tirage1" data-price-eur="135" type="checkbox" data-item="tirage-ariege" value="checkbox">
+                                <label for="tirage1">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
+                              </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+            
+        </div>   
+<!-- ////////////////// SHOP - TIRAGES 2  ////////////////// -->
+        
+        <div class="shop-tirage">
+            <div class="image-tirage">
+                <div class="imgwrapper"><img src="images/Reunion.jpg"></div>
+            </div>
+                <div class="shop-details-item">
+                    <div class="commande-block">
+                        <div class="description">
+                            <p>La Réunion</p>
+                        </div>
+                        <div class="prix"><h2>135 €</h2></div>
+                        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+                        <div class="product-description">
+                            <ul class="product-details">
+                                <li>Tirage lambda</li>
+                                <li>Edition à 30 exemplaires</li>
+                                <li>Numéroté & signé</li>
+                                <li>Format 20x30 cm</li>
+                            </ul>
+                        </div>
+                        <div class="shop-list-wrapper">
+                            <ul class="shop-list">
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="tirage2" data-price-eur="135" type="checkbox" data-item="tirage-reunion" value="checkbox">
+                                <label for="tirage2">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
+                              </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+            
+        </div> 
+   <!-- ////////////////// SHOP - TIRAGES 3  ////////////////// -->
+        
+        <div class="shop-tirage">
+            <div class="image-tirage">
+                <div class="imgwrapper"><img src="images/Cogny.jpg"></div>
+            </div>
+                <div class="shop-details-item">
+                    <div class="commande-block">
+                        <div class="description">
+                            <p>Rhône</p>
+                        </div>
+                        <div class="prix"><h2>135 €</h2></div>
+                        <div class="fraisdeport"><h6>+ 5€ de frais de port</h6></div>
+                        <div class="product-description">
+                            <ul class="product-details">
+                                <li>Tirage lambda</li>
+                                <li>Edition à 30 exemplaires</li>
+                                <li>Numéroté & signé</li>
+                                <li>Format 20x30 cm</li>
+                            </ul>
+                        </div>
+                        <div class="shop-list-wrapper">
+                            <ul class="shop-list">
+                              <li>
+                                <input class="styled-checkbox js-updatePrice" id="tirage3" data-price-eur="135" type="checkbox" data-item="tirage-rhone" value="checkbox">
+                                <label for="tirage3">J'en veux </label><input type="number" class="js-updatePrice" value="1" min="1"><span class="input-text-after"> exemplaire(s)</span>
+                              </li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+            
+        </div> 
+        
+        </div>
+        </div>
+    </main>
+      <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row2">
+          <div class="col-4">
+            <p><a href="mailto:contact@sauvage.photo">Contact</a> &copy; 2021 Tous droits réservés.
+            </p>
+        </div>
+
+
+        </div>
+      </div>
+      </footer>
+    <script src='js/master.js'></script>
+<!--    <script src="js/anchor-scrolling.js"></script>-->
+</body>
+    
+
+</html>
