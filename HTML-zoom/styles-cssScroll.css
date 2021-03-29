@@ -1279,7 +1279,6 @@ button:focus {
         .logo-nav{
             grid-column-start: 3;
             grid-column-end: 6;
-        /*    grid-row-start: 1;*/
             background-size: 124px;
             background-position: right;
         }
@@ -1313,32 +1312,17 @@ button:focus {
             bottom: 0px;
             border-radius: 46px;
             background-color: var(--04-verydarkbrown);
-        /*
-
-            grid-column-start: 6;
-            grid-column-end: 9;
-            justify-self: end;
-            width: auto;
-            padding-right: 20px;
-            text-align: center;
-            padding-top: 8px;
-        */
+       
             }
 
         .basket-title{
-        /*    background-color: darkblue;*/
             letter-spacing: 0px;
             font-size: 15px;
             padding-left: 0px;
             justify-self: end;
-        /*
-            padding-top: 16px;
-            padding-bottom: 8px;
-        */
         }
 
         .basket-total{
-        /*    background-color: blueviolet;*/
             padding-left: 0px;
             padding-top: 12px;
             padding-bottom: 16px;
@@ -1415,16 +1399,6 @@ button:focus {
             display: grid;
         }
 
-
-        /*
-        ul.commander{
-            margin: 0;
-            padding: 0;
-            display: grid;
-            list-style:none;
-            background-color: aliceblue;
-        }
-        */
         ul.commander li{
             display: grid;
             padding: 20px 0px 20px 0px;
@@ -1503,6 +1477,7 @@ button:focus {
 
         .image-tirage{
             grid-column-start: span 8;
+            padding-top: 0px;
         }
 
         .description-tirage {
@@ -1531,7 +1506,7 @@ button:focus {
             justify-items: center;
             display: grid; 
             grid-template-columns: 1fr;
-            height: auto;
+            height: 460px;
             padding: 40px;
             padding-bottom: 30px;
         }
@@ -1540,12 +1515,17 @@ button:focus {
             grid-column: span 12; 
             display: grid; 
             grid-template-columns: 1fr;
-            padding: 60px 40px 40px 40px;
+            padding: 20px 40px 40px 40px;
+        }
+        
+        .shop-tirage .shop-details-item{
+            height: 410px;
         }
     
         .shop-tirage .shop-details-item .commande-block{
             grid-template-rows: inherit;
             padding: 32px;
+            height: 370px;
         }
     
         .shop-tirage .shop-details-item .commande-block .description{
@@ -1577,8 +1557,9 @@ button:focus {
         
     
         .site-footer {
-        padding-bottom: 0;
+            height: 102px;
         }
+    
         .site-footer .copyright-text,
         .site-footer .social-icons {
          text-align: center;
@@ -1644,6 +1625,4 @@ button:focus {
                     margin: -4px 1px 3px 3px;
                 }
 }
-
-
 
